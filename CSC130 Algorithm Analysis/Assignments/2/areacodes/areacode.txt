@@ -1,0 +1,358 @@
+3
+356
+888,Toll-Free Service
+618,Illinois: Centralia
+360,Washington: Olympia
+473,Grenada
+281,Texas: Houston
+765,Indiana: Kokomo
+941,Florida: Bradenton
+931,Tennessee: Columbia
+315,New York: Syracuse
+470,Georgia: Atlanta
+561,Florida: West Palm Beach
+505,New Mexico
+410,Maryland: Annapolis
+866,Toll-Free Service
+507,Minnesota: Rochester
+331,Illinois: Aurora
+762,Georgia: Augusta
+385,Utah: Salt Lake City
+718,New York: New York City
+809,Dominican Republic
+440,Ohio: Ashtabula
+740,Ohio: Portsmouth
+989,Michigan: Saginaw
+510,California: Oakland
+539,Oklahoma: Tulsa
+515,Iowa: Des Moines
+978,Massachusetts: Salem
+900,Premium Services
+850,Florida: Tallahassee
+416,Ontario: Toronto
+856,New Jersey: Vineland
+204,Manitoba
+517,Michigan: Lansing
+901,Tennessee: Memphis
+616,Michigan: Grand Rapids
+832,Texas: Houston
+414,Wisconsin: Milwaukee
+406,Montana
+649,Turks and Caicos Islands
+217,Illinois: Springfield
+352,Florida: Gainesville
+678,Georgia: Atlanta
+309,Illinois: Peoria
+614,Ohio: Columbus
+769,Mississippi: Jackson
+534,Wisconsin: Eau Claire
+401,Rhode Island
+661,California: Bakersfield
+579,Quebec: Terrebone
+504,Louisiana: New Orleans
+857,Massachusetts: Boston
+509,Washington: Spokane
+405,Oklahoma: Oklahoma City
+949,California: Irvine
+269,Michigan: Battle Creek
+250,British Columbia: Prince Rupert
+641,Iowa: Mason City
+308,Nebraska: North Platte
+603,New Hampshire
+734,Michigan: Ann Arbor
+284,British Virgin Islands
+872,Illinois: Chicago
+502,Kentucky: Frankfort
+877,Toll-Free Service
+289,Ontario: Hamilton
+664,Montserrat
+918,Oklahoma: Tulsa
+559,California: Fresno
+518,New York: Albany
+310,California: Malibu
+956,Texas: Brownsville
+619,California: San Diego
+731,Tennessee: Jackson
+772,Florida: Vero Beach
+802,Vermont
+551,New Jersey: Hackensack
+441,Bermuda
+701,North Dakota
+805,California: Ventura
+246,Barbados
+817,Texas: Fort Worth
+418,Quebec: Quebec
+336,North Carolina: Winston Salem
+815,Illinois: Joliet
+580,Oklahoma: Lawton
+636,Missouri: Saint Charles
+606,Kentucky: Ashland
+386,Florida: Daytona Beach
+774,Massachusetts: Brockton
+813,Florida: Tampa
+727,Florida: Saint Petersburg
+318,Louisiana: Shreveport
+779,Illinois: Rockford
+506,New Brunswick
+808,Hawaii
+268,Antigua and Barbuda
+869,Saint Kitts and Nevis
+712,Iowa: Sioux City
+781,Massachusetts: Waltham
+816,Missouri: Kansas City
+337,Louisiana: Lake Charles
+859,Kentucky: Lexington
+971,Oregon: Salem
+417,Missouri: Springfield
+858,California: San Diego
+684,American Samoa
+915,Texas: El Paso
+903,Texas: Tyler
+929,New York: New York City
+279,California: Sacramento
+646,New York: New York City
+912,Georgia: Savannah
+604,British Columbia: Vancouver
+909,California: San Bernardino
+317,Indiana: Indianapolis
+256,Alabama: Huntsville
+252,North Carolina: Rocky Mount
+732,New Jersey: New Brunswick
+334,Alabama: Montgomery
+786,Florida: Miami
+305,Florida: Key West
+631,New York: Suffolk County
+919,North Carolina: Raleigh
+240,Maryland: Bethesda
+906,Michigan: Escanaba
+939,Puerto Rico
+610,Pennsylvania: Allentown
+848,New Jersey: New Brunswick
+868,Trinidad and Tobago
+973,New Jersey: Newark
+657,California: Anaheim
+253,Washington: Tacoma
+254,Texas: Waco
+970,Colorado: Aspen
+276,Virginia: Abington
+651,Minnesota: Saint Paul
+430,Texas: Tyler
+800,Toll-Free Service
+803,South Carolina: Columbia
+419,Ohio: Toledo
+212,New York: New York City
+251,Alabama: Mobile
+339,Massachusetts: Waltham
+947,Michigan: Pontiac
+623,Arizona: Sun City
+878,Pennsylvania: New Castle
+306,Saskatchewan
+810,Michigan: Flint
+763,Minnesota: Maple Grove
+670,Northern Mariana
+264,Anguilla
+870,Arkansas: Pine Bluff
+573,Missouri: Jefferson City
+620,Kansas: Dodge City
+403,Alberta: Calgary
+979,Texas: Bryan
+706,Georgia: Columbus
+587,Alberta: Calgary
+458,Oregon: Eugene
+228,Mississippi: Biloxi
+704,North Carolina: Charlotte
+423,Tennessee: Chattanooga
+936,Texas: Huntsville
+806,Texas: Amarillo
+229,Georgia: Albany
+209,California: Modesto
+530,California: Chico
+408,California: San Jose
+301,Maryland: Cumberland
+307,Wyoming
+787,Puerto Rico
+574,Indiana: South Bend
+747,California: Burbank
+784,St Vincent and the Grenadines
+586,Michigan: Port Huron
+717,Pennsylvania: Harrisburg
+216,Ohio: Cleveland
+814,Pennsylvania: Erie
+985,Louisiana: Houma
+925,California: Concord
+562,California: Long Beach
+917,New York: New York City
+920,Wisconsin: Green Bay
+807,Ontario: Thunder Bay
+601,Mississippi: Jackson
+847,Illinois: Evanston
+205,Alabama: Birmingham
+239,Florida: Fort Myers
+647,Ontario: Toronto
+908,New Jersey: Elizabeth
+231,Michigan: Traverse City
+818,California: Burbank
+705,Ontario: North Bay
+709,Newfoundland and Labrador
+662,Mississippi: Greenville
+215,Pennsylvania: Philadelphia
+780,Alberta: Edmonton
+330,Ohio: Akron
+708,Illinois: Melrose Park
+785,Kansas: Topeka
+767,Dominica
+855,Toll-Free Service
+442,California: Escondido
+864,South Carolina: Greenville
+828,North Carolina: Asheville
+213,California: Los Angeles
+876,Jamaica
+700,Interexchange Carrier Services
+323,California: Florence
+860,Connecticut: Hartford
+914,New York: White Plains
+402,Nebraska: Lincoln
+916,California: Sacramento
+702,Nevada: Las Vegas
+208,Idaho
+714,California: Santa Ana
+863,Florida: Lakeland
+435,Utah: Cedar City
+607,New York: Binghamton
+831,California: Monterey
+262,Wisconsin: Racine
+203,Connecticut: New Haven
+475,Connecticut: Bridgeport
+801,Utah: Salt Lake City
+434,Virginia: Lynchburg
+612,Minnesota: Minneapolis
+519,Ontario: London
+503,Oregon: Astoria
+940,Texas: Wichita Falls
+907,Alaska
+757,Virginia: Virginia Beach
+415,California: San Francisco
+450,Quebec: Saint Lambert
+682,Texas: Fort Worth
+478,Georgia: Macon
+972,Texas: Dallas
+479,Arkansas: Fort Smith
+207,Maine
+226,Ontario: London
+513,Ohio: Cincinnati
+514,Quebec: Montreal
+609,New Jersey: Trenton
+778,British Columbia: Victoria
+775,Nevada: Carson City
+575,New Mexico: Las Cruces
+615,Tennessee: Nashville
+913,Kansas: Kansas City
+849,Dominican Republic: Santo Domingo
+951,California: Temecula
+650,California: Palo Alto
+202,District Of Columbia: Washington
+608,Wisconsin: Madison
+770,Georgia: Atlanta
+829,Dominican Republic
+585,New York: Rochester
+830,Texas: Del Rio
+681,West Virginia: Charleston
+720,Colorado: Denver
+630,Illinois: Aurora
+206,Washington: Seattle
+928,Arizona: Flagstaff
+340,Virgin Islands
+260,Indiana: Fort Wayne
+724,Pennsylvania: New Castle
+516,New York: Hempstead
+721,Sint Maarten
+270,Kentucky: Bowling Green
+501,Arkansas: Little Rock
+812,Indiana: Evansville
+845,New York: Poughkeepsie
+508,Massachusetts: Brockton
+758,Saint Lucia
+432,Texas: Midland
+902,"Nova Scotia, Prince Edward Island"
+316,Kansas: Wichita
+303,Colorado: Denver
+319,Iowa: Cedar Rapids
+937,Ohio: Dayton
+304,West Virginia
+710,United States Government
+484,Pennsylvania: Allentown
+224,Illinois: Waukegan
+302,Delaware
+715,Wisconsin: Eau Claire
+267,Pennsylvania: Philadelphia
+626,California: Pasadena
+867,"Northwest Territories, Nunavut, Yukon"
+904,Florida: Jacksonville
+351,Massachusetts: Salem
+347,New York: New York City
+210,Texas: San Antonio
+540,Virginia: Harrisonburg
+234,Ohio: Akron
+520,Arizona: Tucson
+954,Florida: Fort Lauderdale
+361,Texas: Corpus Christi
+843,South Carolina: Charleston
+413,Massachusetts: Springfield
+425,Washington: Everett
+512,Texas: Austin
+600,Canadian Services
+716,New York: Buffalo
+242,Bahamas
+249,Ontario: Sault Ste Marie
+865,Tennessee: Knoxville
+407,Florida: Orlando
+602,Arizona: Phoenix
+605,South Dakota
+613,Ontario: Ottawa
+773,Illinois: Chicago
+438,Quebec: Montreal
+671,Guam
+320,Minnesota: Saint Cloud
+412,Pennsylvania: Pittsburgh
+325,Texas: San Angelo
+541,Oregon: Medford
+980,North Carolina: Charlotte
+313,Michigan: Detroit
+321,Florida: Orlando
+404,Georgia: Atlanta
+581,Quebec: Quebec City
+660,Missouri: Marshall
+409,Texas: Galveston
+804,Virginia: Richmond
+571,Virginia: Arlington
+703,Virginia: Arlington
+862,New Jersey: Newark
+719,Colorado: Pueblo
+218,Minnesota: Duluth
+617,Massachusetts: Boston
+443,Maryland: Baltimore
+225,Louisiana: Baton Rouge
+424,California: Santa Monica
+248,Michigan: Pontiac
+312,Illinois: Chicago
+938,Alabama: Huntsville
+754,Florida: Fort Lauderdale
+469,Texas: Dallas
+819,Quebec: Sherbrooke
+343,Ontario: Ottawa
+905,Ontario: Hamilton
+570,Pennsylvania: Scranton
+480,Arizona: Tempe
+219,Indiana: Gary
+314,Missouri: Saint Louis
+567,Ohio: Toledo
+952,Minnesota: Bloomington
+201,New Jersey: Hackensack
+760,California: Palm Springs
+456,International Inbound Services
+910,North Carolina: Fayetteville
+713,Texas: Houston
+214,Texas: Dallas
+345,Cayman Islands
+707,California: Santa Rosa
+563,Iowa: Dubuque

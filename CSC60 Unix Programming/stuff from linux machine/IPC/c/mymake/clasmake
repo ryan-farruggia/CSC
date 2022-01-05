@@ -1,0 +1,22 @@
+CFLAGS := -Wall -Werror -pedantic
+
+GCC := gcc
+
+add.o: add.c
+	$(GCC) $(CFLAGS) -c add.c -o add.o
+
+sub.o: sub.c
+	echo "compiling sub "
+	$(GCC) $(CFLAGS) -c sub.c -o sub.o
+
+main.o: main.c
+	echo "compiling main ...."
+	$(GCC) $(CFLAGS) -c main.c -o main.o
+
+mycalc: add.o sub.o main.o
+	echo "linking all ...."
+	$(GCC)  add.o sub.o main.o -o yourcalc
+
+
+clean:
+	rm *.o

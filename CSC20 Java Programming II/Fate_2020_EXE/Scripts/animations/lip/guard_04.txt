@@ -1,0 +1,36 @@
+888
+speech
+476,276, p1, 190
+476,276, guard_cdgknstxyz, 105
+476,276, guard_aei, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_aei, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_o, 105
+476,276, guard_fv, 105
+476,276, guard_u, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_fv, 105
+476,276, guard_aei, 105
+476,276, guard_bmp, 105
+476,276, guard_aei, 105
+476,276, guard_qw, 105
+476,276, guard_u, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_u, 105
+476,276, guard_aei, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_ee, 118
+476,276, p1, 39
+476,276, guard_aei, 105
+476,276, guard_bmp, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_aei, 105
+476,276, guard_l, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_bmp, 105
+476,276, guard_r, 105
+476,276, guard_aei, 105
+476,276, guard_th, 105
+476,276, guard_cdgknstxyz, 162
+476,276, p1, 500

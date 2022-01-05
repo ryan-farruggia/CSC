@@ -1,0 +1,478 @@
+# This stuff is ALWAYS the header...
+   label: start
+   clear: all
+   inventory: on
+   timeofday: off
+
+# Update the party for the Equip engine...
+   updateparty: 0
+
+# This is level specific (load bg, show viewport, non-takeable buttons)
+   bg: room0012
+   raw: "dust_room_particle"
+   raw: "display_gp"
+   setambientaudio: "audio/ambient/pc_cave.wav"
+   setmusic: "audio/music/pc.wav"
+
+# This is UI overlay stuff
+   loadsub: ui.txt
+
+# This is the portrait and meter set up
+   ifnbool: 0, true, soloload
+   # Load the party
+      loadsub: persephone_party.txt
+      # Add Darsius stuff here too (profile, meter, controls, etc.)
+      loadsub: darsius_party.txt
+      ifboolx: 9, true, d1_ice.txt
+      ifboolx: 10, true, d2_cyclone.txt
+      ifboolx: 11, true, d3_lightning.txt
+      ifboolx: 12, true, d4_drain.txt
+      ifboolx: 13, true, d5_drain2.txt
+      ifboolx: 14, true, d6_enchant.txt
+      ifboolx: 15, true, d7_fear.txt
+      jump: aftersoloload
+   label: soloload
+      loadsub: persephone_solo.txt
+   label: aftersoloload
+
+#Check out Persephone's Controls...
+   ifboolx: 2, true, p1_fire.txt
+   ifboolx: 3, true, p2_cyclone.txt
+   ifboolx: 4, true, p3_lightning.txt
+   ifboolx: 5, true, p4_ward.txt
+   ifboolx: 6, true, p5_ward2.txt
+   ifboolx: 7, true, p6_heal.txt
+   ifboolx: 8, true, p7_heal2.txt
+
+# Set up the automap?
+   minimaplocation: "Pyre's Cove"
+   # Default map first...
+   minimaplayout: "NS"
+   setautomap: pyrescove, 6, 3, "er30", rp0013.txt
+   addmapkey: pyrescove, 6, 3, 4, purple_key, hearth_legend
+
+# Guard
+   showanim: guard1.txt, guard1
+   showanim: guard1_blink.txt, guard1_blink
+   button: guard_label, 517, 299, 679, 794, "Guard"
+
+# Decor
+   show: pennant1, 1300, 260
+   show: pennant1a, 480, 260
+   show: rock3, 1472, 721
+   show: crate60, 289, 629
+   show: ale, 394, 587
+   showanim: candle6.txt, candle6
+   button: banner1_label, 1314, 263, 1442, 497, "Banner"
+   button: banner2_label, 495, 263, 623, 497, "Banner"
+   button: rock_label, 1475, 732, 1594, 844, "Rock"
+   button: ale_label, 406, 592, 463, 663, "Ale"
+   button: candle_label, 336, 600, 379, 660, "Candle"
+   button: crate_label, 298, 636, 494, 858, "Crate"
+
+# Direction viewport arrow(s)
+   buttong: downlabel2, 540, 820, 1362, 911, downcursor, -100, -100
+   buttong: uplabel2, 768, 232, 1153, 640, upcursor, -100, -100
+####################################################################################
+# This is the mainloop (always the same)
+   label: mainloop
+   clickwait: 0
+   jump: mainloop
+
+# Cannot pick up items because cursor and/or inventory space is an issue
+   label: notake
+   console: "No room to take item right now!"
+   jump: mainloop
+
+# This is the status of the HP/MP (meter bar click)
+   label: perse_hp_label
+   displaypstring: "Persephone", "hp", 0, 1
+   jump: mainloop
+
+   label: perse_mp_label
+   displaypstring: "Persephone", "mp", 2, 3
+   jump: mainloop
+
+   label: dar_hp_label
+   displaypstring: "Darsius", "hp", 4, 5
+   jump: mainloop
+
+   label: dar_mp_label
+   displaypstring: "Darsius", "mp", 6, 7
+   jump: mainloop
+
+# This is clicking Persephone's portrait
+   label: perse_portrait_label
+   ifcursortext: "H.Potion", p_use_hpotion
+   ifcursortext: "Health Potion", p_use_hpotion
+   ifcursortext: "Magic Potion", p_use_mpotion
+   ifcursortext: "Fairy Salve", p_use_salve
+   ifcursorbook: read_book_label
+   label: perse_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Persephone's Equip/Stats page...
+   equipwait: "Persephone"
+   console: You close Persephone's Equip/Stats page...
+   jump: mainloop
+
+# This is clicking Darsius' portrait
+   label: dar_portrait_label
+   ifcursortext: "H.Potion", d_use_hpotion
+   ifcursortext: "Health Potion", d_use_hpotion
+   ifcursortext: "Magic Potion", d_use_mpotion
+   ifcursortext: "Fairy Salve", d_use_salve
+   ifcursorbook: read_book_label
+   label: dar_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Darsius' Equip/Stats page...
+   equipwait: "Darsius"
+   console: You close Darsius' Equip/Stats page...
+   jump: mainloop
+
+# This is Persephone's Clicked Spell Icons
+   label: persephone_ice_spell_label
+   castspell: "Persephone", 0
+   jump: mainloop
+
+   label: persephone_fire_spell_label
+   castspell: "Persephone", 1
+   jump: mainloop
+
+   label: persephone_cyclone_spell_label
+   castspell: "Persephone", 2
+   jump: mainloop
+
+   label: persephone_lightning_spell_label
+   castspell: "Persephone", 3
+   jump: mainloop
+
+   label: persephone_ward_spell_label
+   castspell: "Persephone", 4
+   jump: mainloop
+
+   label: persephone_ward2_spell_label
+   castspell: "Persephone", 5
+   jump: mainloop
+
+   label: persephone_heal_spell_label
+   castspell: "Persephone", 6
+   jump: mainloop
+
+   label: persephone_heal2_spell_label
+   castspell: "Persephone", 7
+   jump: mainloop
+
+# This is Darsius' Clicked Spell Icons
+   label: darsius_fire_spell_label
+   castspell: "Darsius", 0
+   jump: mainloop
+
+   label: darsius_ice_spell_label
+   castspell: "Darsius", 1
+   jump: mainloop
+
+   label: darsius_cyclone_spell_label
+   castspell: "Darsius", 2
+   jump: mainloop
+
+   label: darsius_light_spell_label
+   castspell: "Darsius", 3
+   jump: mainloop
+
+   label: darsius_drain_spell_label
+   castspell: "Darsius", 4
+   jump: mainloop
+
+   label: darsius_drain2_spell_label
+   castspell: "Darsius", 5
+   jump: mainloop
+
+   label: darsius_enchant_spell_label
+   castspell: "Darsius", 6
+   jump: mainloop
+
+   label: darsius_fear_spell_label
+   castspell: "Darsius", 7
+   jump: mainloop
+
+# These are the labels for the Game Controls...
+   label: load_game_label
+   console: You open the Load record...
+   loadwait: 0
+   jump: mainloop
+
+   label: save_game_label
+   ifenemy: nosavelabel
+   console: You open the Save record...
+   savewait: 0
+   jump: mainloop
+
+   label: journal_label
+   ifenemy: noquestlabel
+   console: You open the Quest Journal...
+   questwait: 0
+   jump: mainloop
+
+   label: help_icon_label
+   raw: "item_help"
+   jump: mainloop
+
+   label: audio_label
+   raw: "toggle_audio"
+   jump: mainloop
+
+   label: exit_label
+   raw: "exit"
+   jump: mainloop
+
+# This is for the map icon click...
+   label: map_icon_label
+   ifenemy: nomaplabel
+   console: You open the automap...
+   setcurrentmap: "pyrescove"
+   mapmode: on
+   jump: mainloop
+
+# Not allowed labels (noequip, etc...)
+   label: noequiplabel
+   console: "You cannot equip while an enemy is present."
+   jump: mainloop
+
+   label: nomovelabel
+   console: "You cannot move that way while an enemy is present."
+   jump: mainloop
+
+   label: nomaplabel
+   console: "You cannot open your automap while an enemy is present."
+   jump: mainloop
+
+   label: nosavelabel
+   console: "You cannot save while an enemy is present."
+   jump: mainloop
+
+   label: noquestlabel
+   console: "You cannot open your journal while an enemy is present."
+   jump: mainloop
+
+# Potion usage
+   # Persephone Health potion...
+   label: p_use_hpotion
+   usepotion: "Persephone", hpotion
+   jump: mainloop
+
+   # Persephone Magic potion...
+   label: p_use_mpotion
+   usepotion: "Persephone", mpotion
+   jump: mainloop
+
+   # Persephone Fairy Salve...
+   label: p_use_salve
+   usepotion: "Persephone", fairysalve
+   jump: mainloop
+
+   # Darsius Health potion...
+   label: d_use_hpotion
+   usepotion: "Darsius", hpotion
+   jump: mainloop
+
+   # Darsius Magic potion...
+   label: d_use_mpotion
+   usepotion: "Darsius", mpotion
+   jump: mainloop
+
+   # Darsius Fairy Salve...
+   label: d_use_salve
+   usepotion: "Darsius", fairysalve
+   jump: mainloop
+
+# Reading a book (when clicked on party member)
+   label: read_book_label
+   ifenemy: no_read_enemy
+   console: "You open the book..."
+   raw: "set_book_cursor"
+   playwav: "audio/sfx/bookopen.wav"
+   showbookanim: 0
+   raw: "show_book"
+   bookwaitx: 0
+   raw: "hide_book"
+   jump: mainloop
+
+   label: no_read_enemy
+   console: "You cannot read a book while an enemy is present."
+   jump: mainloop
+####################################################################################
+# These are for the mini-map movement directions (and even the WASD movements)
+   label: down_map_label
+   label: downlabel2
+   ifenemy: nomovelabel
+   move: "rp0009.txt"
+   jump: mainloop
+
+   label: up_map_label
+   label: uplabel2
+   ifenemy: nomovelabel
+   # Check to see if the quest is complete...
+   ifstate: 5, 3, let_leave_label
+   ifstate: 4, 1, already_assigned_quest
+   # Check for the silly uparrow...
+   ifcursortext: "direction", sendout
+   label: returnin
+   playwav: "audio/voice/guard_05.wav"
+   console: "Guard: 'I can't let you leave like this!'"
+   showanim: lip/guard_05.txt, guard_05
+   dialognoanim: "Guard: 'I can't let you leave like this!'"
+   playwav: "audio/voice/pspeech0028.wav"
+   console: "Persephone: 'Like what?'"
+   showanim: lip/pspeech0028.txt, pspeech0028
+   playwav: "audio/voice/guard_06.wav"
+   console: "Guard: 'It's dangerous out there! At a minimum, you need to have protective adornments and a way to heal your wounds...should you get injured.'"
+   showanim: lip/guard_06.txt, guard_06
+   dialognoanim: "Guard: 'It's dangerous out there! At a minimum, you need to have protective adornments and a way to heal your wounds...should you get injured.'"
+   playwav: "audio/voice/pspeech0029.wav"
+   console: "Persephone: 'Very well...thanks anyway!'"
+   showanim: lip/pspeech0029.txt, pspeech0029
+   set: "state", 4, 1
+   assignquest: worried_guard.txt
+   playwav: "audio/sfx/alert.wav"
+   jump: mainloop
+
+   # Fix issue with cursor getting stuck on uparrow when conversation engaged
+   label: sendout
+   setcursor: dcursor, "default"
+   jump: returnin
+
+   label: sendout2
+   setcursor: dcursor, "default"
+   jump: returnin2
+
+   label: already_assigned_quest
+   playwav: "audio/voice/guard_05.wav"
+   console: "Guard: 'I can't let you leave like this!'"
+   showanim: lip/guard_05.txt, guard_05
+   jump: mainloop
+
+   label: let_leave_label
+   # Process leaving here!
+   # Darsius is gone from Study
+   ifcursortext: "direction", sendout2
+   label: returnin2
+   set: "bool", 25, true
+   # Fail the objective of the quest to find him (or quest is was already complete!)
+   ifquest: finddarsiustag, quest_out
+   label: quest_back
+   move: "rp0014.txt"
+   jump: mainloop
+
+   label: quest_out
+   # Fail the quest if it wasn't completed at this point
+   removequest: finddarsiustag
+   playwav: "audio/sfx/denied.wav"
+   dialog: "Quest 'Find the Mystery Man' has failed."
+   jump: quest_back
+
+# Decor look
+   label: banner1_label
+   label: banner2_label
+   console: "You wonder if the governor of Hearthshire offers incentives for how many of these an area hangs up."
+   jump: mainloop
+
+   label: rock_label
+   ifcursortext: "Mallet", use_mallet_on_boulder_label
+   console: "That is a massive boulder and you cannot lift it."
+   jump: mainloop
+
+   label: use_mallet_on_boulder_label
+   console: "Despite your attempts to break down this boulder, the large rock endures."
+   jump: mainloop
+
+   label: ale_label
+   console: "This brew seems to be what gets the guard through his daily shift."
+   jump: mainloop
+
+   label: crate_label
+   console: "The crate seems to serve no other purpose than holding the guard's beer."
+   jump: mainloop
+
+   label: candle_label
+   console: "The candle is there so the guard doesn't forget where he placed his pint."
+   jump: mainloop
+
+# Guard Interactions...
+   label: guard_label
+   raw: "persephone_dead_check"
+   ifstate: 4, 1, afterquest_label
+   playwav: "audio/voice/guard_01.wav"
+   console: "Guard: 'Hello, Princess! It is nice to see you up and moving around.'"
+   showanim: lip/guard_01.txt, guard_01
+   jump: mainloop
+
+   label: afterquest_label
+   # Check for Darsius quest given...
+   ifbool: 26, true, museum_convo_tree
+   playwav: "audio/voice/guard_01.wav"
+   console: "Guard: 'Hello, Princess! It is nice to see you up and moving around.'"
+   showanim: lip/guard_01.txt, guard_01
+   label: loopback2
+   menu: 3, op4("So Long!"), aop2("How to heal wounds?"), aop1("Where are 'adornments'?")
+   jump: mainloop
+
+   label: museum_convo_tree
+   playwav: "audio/voice/guard_01.wav"
+   console: "Guard: 'Hello, Princess! It is nice to see you up and moving around.'"
+   showanim: lip/guard_01.txt, guard_01
+   label: loopback
+   menu: 4, op4("So Long!"), op3("Where is the museum?"), op2("How to heal wounds?"), op1("Where are 'adornments'?")
+   jump: mainloop
+
+   label: op1
+   playwav: "audio/voice/pspeech0024.wav"
+   console: "Persephone: 'Where can I find 'adornments'?'"
+   showanim: lip/pspeech0024.txt, pspeech0024
+   playwav: "audio/voice/guard_02.wav"
+   console: "Guard: 'I would speak with the town merchant if I were you.'"
+   showanim: lip/guard_02.txt, guard_02
+   jump: loopback
+
+   label: op2
+   playwav: "audio/voice/pspeech0025.wav"
+   console: "Persephone: 'How do I heal my wounds?'"
+   showanim: lip/pspeech0025.txt, pspeech0025
+   playwav: "audio/voice/guard_03.wav"
+   console: "Guard: 'Short of magic, you will need a health potion. Speak to the Elven cook in the kitchen. She should know how to concoct a basic elixir.'"
+   showanim: lip/guard_03.txt, guard_03
+   jump: loopback
+
+   label: aop1
+   playwav: "audio/voice/pspeech0024.wav"
+   console: "Persephone: 'Where can I find 'adornments'?'"
+   showanim: lip/pspeech0024.txt, pspeech0024
+   playwav: "audio/voice/guard_02.wav"
+   console: "Guard: 'I would speak with the town merchant if I were you.'"
+   showanim: lip/guard_02.txt, guard_02
+   jump: loopback2
+
+   label: aop2
+   playwav: "audio/voice/pspeech0025.wav"
+   console: "Persephone: 'How do I heal my wounds?'"
+   showanim: lip/pspeech0025.txt, pspeech0025
+   playwav: "audio/voice/guard_03.wav"
+   console: "Guard: 'Short of magic, you will need a health potion. Speak to the Elven cook in the kitchen. She should know how to concoct a basic elixir.'"
+   showanim: lip/guard_03.txt, guard_03
+   jump: loopback2
+
+   label: op3
+   playwav: "audio/voice/pspeech0026.wav"
+   console: "Persephone: 'Where is the Hearthshire Museum?'"
+   showanim: lip/pspeech0026.txt, pspeech0026
+   playwav: "audio/voice/guard_04.wav"
+   console: "Guard: 'The museum is at the far southeast end of Hearthshire.'"
+   showanim: lip/guard_04.txt, guard_04
+   jump: loopback
+
+   label: op4
+   playwav: "audio/voice/pspeech0027.wav"
+   console: "Persephone: 'So long!'"
+   showanim: lip/pspeech0027.txt, pspeech0027
+   jump: mainloop

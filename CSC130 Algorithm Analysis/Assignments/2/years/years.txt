@@ -1,0 +1,15 @@
+4
+13
+2020,Great Toilet Paper Shortage   
+1839,Sutter's Fort founded
+1846,Bear Flag Revolt
+1947,Sacramento State founded 
+1977,Star Wars was born
+2017,Star Wars franchise almost destroyed
+1964,Buffalo wings invented
+1783,United States Constitution enacted
+1850,California joins the United States
+1848,Gold Rush begins 
+1776,American Revolution
+1980,Pacman was released
+1953,Cheese Whiz was invented (Nacho Era began)

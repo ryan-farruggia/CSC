@@ -1,0 +1,21 @@
+888
+speech
+476,276, p1, 228
+476,276, guard_aei, 105
+476,276, guard_qw, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_r, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_ee, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_l, 105
+476,276, guard_r, 105
+476,276, guard_ch, 105
+476,276, guard_aei, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_aei, 105
+476,276, guard_cdgknstxyz, 105
+476,276, guard_l, 105
+476,276, guard_aei, 105
+476,276, guard_fv, 172
+476,276, p1, 500

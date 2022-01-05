@@ -1,0 +1,7 @@
+worriedguardquest
+Worried Guard
+The annoying, but well meaning, guard at the exit of Pyre's Cove doesn't believe you can defend yourself outside without a health potion and a piece of armor.
+Reward: none
+2
+Acquire health potion*wg0001
+Acquire adornment*wg0002

@@ -1,0 +1,6 @@
+finddarsiustag
+Find the Mystery Man
+The healer Fandriel told you that a man brought you here after you passed out from smoke inhalation. You should find this man.
+Reward: none
+1
+Find the man who brought you here*finddarsius01*4*3*4*pyrescove

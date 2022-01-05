@@ -1,0 +1,3 @@
+# This is for Persephone's Lightning Spell loading...   
+   show: lighticon, 1305, 1000
+   buttongx: persephone_lightning_spell_label, 1305, 1000, 1357, 1031, spell_hover, 1305, 1000, "Lightning"

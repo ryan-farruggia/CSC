@@ -1,0 +1,11 @@
+300
+loop
+guard_idle1, 476, 276
+guard_idle2, 476, 276
+guard_idle3, 476, 276
+guard_idle2, 476, 276
+guard_idle1, 476, 276
+guard_idle1, 476, 276
+guard_idle1, 476, 276
+guard_idle1, 476, 276
+guard_idle1, 476, 276

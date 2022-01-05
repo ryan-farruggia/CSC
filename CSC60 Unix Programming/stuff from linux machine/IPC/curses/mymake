@@ -1,0 +1,14 @@
+all: prompt.o main.o getAQuestion.o 
+	gcc main.o prompt.o getAQuestion.o -o ngbee
+
+prompt.o: prompt.c question.h
+	gcc -c prompt.c 
+
+main.o: main.c question.h
+	gcc -c main.c
+
+getAQuestion.o: getAQuestion.c question.h
+	gcc -c getAQuestion.c
+
+clean:
+	rm  -f prompt.o main.o getAQuestion.o ngbee

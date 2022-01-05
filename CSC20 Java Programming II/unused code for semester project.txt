@@ -1,0 +1,95 @@
+from searchByActor inside the while inside the if after movie.pn(" - " + abc);
+
+//int i = lineFromFile.indexOf(' ');
+//String token1 = lineFromFile.substring(0,i);
+//String rest = lineFromFile.substring(i);
+//Movie.p(token1);
+//Movie.p(rest);
+
+from searchByTitle
+
+//String rest = lineFromFile.substring(i); prints the rest of the tokens
+
+from Database at the top
+
+	// Fields
+	// private ArrayList<Movie> movies;
+	
+	// Constructor
+	/*public Database(String filename){
+		movies = new ArrayList<>();
+		//fileRead fr = new fileRead(filename);
+		for(int i = 0; i < fr.getNumberOfLines(); i++){
+			String raw = fr.getLine(); // removed param i
+			// TODO: Parse using the StringTokenizer here and place into movies 
+			//		 as single entries...
+			StringTokenizer st = new StringTokenizer(raw, "*");
+			while (st.hasMoreTokens()) {
+				//movies.add(st.nextToken());
+			}
+		}
+	}*/
+
+from primaryLoop() at the top
+		//fileRead fr = new fileRead("db.txt");
+		//fr.getLine();
+
+
+
+
+
+
+
+	public static void searchByTitle(String title){
+		try {
+			File file = new File("db.txt");
+			final Scanner sc = new Scanner(file);
+			Movie.pn("");
+			
+			while (sc.hasNextLine()) {
+			    final String lineFromFile = sc.nextLine();
+			    if(lineFromFile.contains(title)) {
+			    	Movie.pn(" Succesfully retrieved information for " + title + ":");
+			    	StringTokenizer str = new StringTokenizer(lineFromFile, "*", false);
+			    	while (str.hasMoreTokens()) {
+			    		int i = lineFromFile.indexOf('*');
+					    lineFromFile.substring(0,i);
+					    lineFromFile.substring(i);
+			    		String abc = str.nextToken();
+			    		Movie.pn("   -" + abc);
+			    	}
+			    	int i = lineFromFile.indexOf('*');
+				    lineFromFile.substring(0,i);
+			    } else {
+			    	Movie.pn("Movie title not found.");
+			    }
+			} sc.close();
+			Movie.pn("");
+		} catch (Exception e) {
+			Movie.p("Error. Please try again.");
+		}
+	}
+
+public static void searchByActor(String actor){
+		try {
+			File file = new File("db.txt");
+			final Scanner sc = new Scanner(file);
+			Movie.pn("");
+			Movie.pn(" " + actor + " has starred in the following movies:");
+			String abc = "";
+			final String lineFromFile = sc.nextLine();
+			if (lineFromFile.contains(actor)) {
+				while (sc.hasNextLine()) {
+				    if(lineFromFile.contains(actor)) {
+				    	StringTokenizer str = new StringTokenizer(lineFromFile, "*", false);
+				    	abc = str.nextToken();
+				    	Movie.pn("   -" + abc);
+				    } 
+				}
+			}
+			sc.close();
+			Movie.pn("");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}

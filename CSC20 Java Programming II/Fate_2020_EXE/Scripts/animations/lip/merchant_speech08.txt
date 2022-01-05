@@ -1,0 +1,24 @@
+888
+speech
+876, 260, p1, 292
+876, 260, mer_l, 105
+876, 260, mer_cdgknstxyz, 105
+876, 260, mer_r, 105
+876, 260, mer_u, 105
+876, 260, mer_cdgknstxyz, 105
+876, 260, mer_r, 105
+876, 260, mer_u, 105
+876, 260, mer_cdgknstxyz, 137
+876, 260, p1, 24
+876, 260, mer_cdgknstxyz, 105
+876, 260, mer_u, 105
+876, 260, mer_ee, 105
+876, 260, mer_r, 105
+876, 260, mer_aei, 105
+876, 260, mer_cdgknstxyz, 105
+876, 260, mer_aei, 105
+876, 260, mer_cdgknstxyz, 105
+876, 260, mer_ee, 151
+876, 260, p1, 86
+876, 260, mer_cdgknstxyz, 135
+876, 260, p1, 500

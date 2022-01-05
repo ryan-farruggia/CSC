@@ -1,0 +1,459 @@
+# This stuff is ALWAYS the header...
+   label: start
+   clear: all
+   inventory: on
+   timeofday: off
+   
+# This sets up the stats for Persephone / Darsius
+   ifbool: 17, true, afterstatslabel
+   set: "int", 0, 10
+   set: "int", 1, 10
+   set: "int", 2, 5
+   set: "int", 3, 5
+   set: "int", 4, 20
+   set: "int", 5, 20
+   set: "int", 6, 10
+   set: "int", 7, 10
+   set: "int", 9, 1
+   set: "int", 10, 1
+   set: "int", 13, 1
+   set: "int", 14, 1
+   # This is the G.P. index
+   set: "int", 8, 25
+   # Set party as containing Darsius
+   #set: "bool", 0, true
+   # Test having the fire / lightning icons...
+   #set: "bool", 2, true
+   #set: "bool", 3, true
+   #set: "bool", 4, true
+   #set: "bool", 5, true
+   #set: "bool", 6, true
+   #set: "bool", 7, true
+   #set: "bool", 8, true
+   #set: "bool", 9, true
+   #set: "bool", 10, true
+   #set: "bool", 11, true
+   #set: "bool", 12, true
+   #set: "bool", 13, true
+   #set: "bool", 14, true
+   #set: "bool", 15, true
+   # Set the flag for Stats being set initially
+   set: "bool", 17, true
+   label: afterstatslabel
+
+# Update the party for the Equip engine...
+   updateparty: 0
+
+# This is level specific (load bg, show viewport, non-takeable buttons)
+   minimaplocation: "Pyre's Cove"
+   bg: room0001
+   raw: "dust_room_particle"
+   raw: "display_gp"
+   setambientaudio: "audio/ambient/pc_cave.wav"
+   setmusic: "audio/music/pc.wav"
+
+# This is UI overlay stuff
+   loadsub: ui.txt
+
+# This is the portrait and meter set up
+   ifnbool: 0, true, soloload
+   # Load the party
+      loadsub: persephone_party.txt
+      # Add Darsius stuff here too (profile, meter, controls, etc.)
+      loadsub: darsius_party.txt
+      ifboolx: 9, true, d1_ice.txt
+      ifboolx: 10, true, d2_cyclone.txt
+      ifboolx: 11, true, d3_lightning.txt
+      ifboolx: 12, true, d4_drain.txt
+      ifboolx: 13, true, d5_drain2.txt
+      ifboolx: 14, true, d6_enchant.txt
+      ifboolx: 15, true, d7_fear.txt
+      jump: aftersoloload
+   label: soloload
+      loadsub: persephone_solo.txt
+   label: aftersoloload
+
+#Check out Persephone's Controls...
+   ifboolx: 2, true, p1_fire.txt
+   ifboolx: 3, true, p2_cyclone.txt
+   ifboolx: 4, true, p3_lightning.txt
+   ifboolx: 5, true, p4_ward.txt
+   ifboolx: 6, true, p5_ward2.txt
+   ifboolx: 7, true, p6_heal.txt
+   ifboolx: 8, true, p7_heal2.txt
+
+# Set up the automap?
+   minimaplayout: "N"
+   setautomap: pyrescove, 2, 5, "dr40", rp0001.txt
+   addmapkey: pyrescove, 2, 5, 4, yellowkey, recovery_legend
+
+# Decor (Nightstands, etc.)
+   show: nightstand00, 567, 535
+   button: nightstand1_label, 583, 551, 725, 712, "Nightstand"
+   show: nightstand00a, 1407, 626
+   button: nightstand2_label, 1428, 642, 1565, 800, "Nightstand"
+   showanim: candle1.txt, candle1
+   button: candle_label, 610, 490, 656, 550, "Candle"
+   show: ale, 1470, 565
+   button: ale_label, 1481, 570, 1541, 641, "Ale"
+   show: pennant1, 1370, 210
+   button: pennant_label, 482, 212, 616, 446, "Banner"
+   show: pennant1a, 470, 210
+   button: pennant_label1, 1386, 209, 1513, 446, "Banner"
+   show: chest1, 278, 657
+   button: chest_label, 281, 655, 473, 852, "Chest"
+
+# Fandriel (Caregiver)
+   showanim: fandriel.txt, fandriel
+   showanim: fan_blink.txt, fan_blink
+   button: fandriel_label, 712, 382, 863, 883, "Fandriel"
+
+# Direction viewport arrow(s)
+   buttong: uplabel2, 864, 467, 1083, 660, upcursor, -100, -100
+####################################################################################
+# This is the mainloop (always the same)
+   label: mainloop
+   clickwait: 0
+   jump: mainloop
+
+# Cannot pick up items because cursor and/or inventory space is an issue
+   label: notake
+   console: "No room to take item right now!"
+   jump: mainloop
+
+# This is the status of the HP/MP (meter bar click)
+   label: perse_hp_label
+   displaypstring: "Persephone", "hp", 0, 1
+   jump: mainloop
+
+   label: perse_mp_label
+   displaypstring: "Persephone", "mp", 2, 3
+   jump: mainloop
+
+   label: dar_hp_label
+   displaypstring: "Darsius", "hp", 4, 5
+   jump: mainloop
+
+   label: dar_mp_label
+   displaypstring: "Darsius", "mp", 6, 7
+   jump: mainloop
+
+# This is clicking Persephone's portrait
+   label: perse_portrait_label
+   ifcursortext: "H.Potion", p_use_hpotion
+   ifcursortext: "Health Potion", p_use_hpotion
+   ifcursortext: "Magic Potion", p_use_mpotion
+   ifcursortext: "Fairy Salve", p_use_salve
+   ifcursorbook: read_book_label
+   label: perse_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Persephone's Equip/Stats page...
+   equipwait: "Persephone"
+   console: You close Persephone's Equip/Stats page...
+   jump: mainloop
+
+# This is clicking Darsius' portrait
+   label: dar_portrait_label
+   ifcursortext: "H.Potion", d_use_hpotion
+   ifcursortext: "Health Potion", d_use_hpotion
+   ifcursortext: "Magic Potion", d_use_mpotion
+   ifcursortext: "Fairy Salve", d_use_salve
+   ifcursorbook: read_book_label
+   label: dar_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Darsius' Equip/Stats page...
+   equipwait: "Darsius"
+   console: You close Darsius' Equip/Stats page...
+   jump: mainloop
+
+# This is Persephone's Clicked Spell Icons
+   label: persephone_ice_spell_label
+   castspell: "Persephone", 0
+   jump: mainloop
+
+   label: persephone_fire_spell_label
+   castspell: "Persephone", 1
+   jump: mainloop
+
+   label: persephone_cyclone_spell_label
+   castspell: "Persephone", 2
+   jump: mainloop
+
+   label: persephone_lightning_spell_label
+   castspell: "Persephone", 3
+   jump: mainloop
+
+   label: persephone_ward_spell_label
+   castspell: "Persephone", 4
+   jump: mainloop
+
+   label: persephone_ward2_spell_label
+   castspell: "Persephone", 5
+   jump: mainloop
+
+   label: persephone_heal_spell_label
+   castspell: "Persephone", 6
+   jump: mainloop
+
+   label: persephone_heal2_spell_label
+   castspell: "Persephone", 7
+   jump: mainloop
+
+# This is Darsius' Clicked Spell Icons
+   label: darsius_fire_spell_label
+   castspell: "Darsius", 0
+   jump: mainloop
+
+   label: darsius_ice_spell_label
+   castspell: "Darsius", 1
+   jump: mainloop
+
+   label: darsius_cyclone_spell_label
+   castspell: "Darsius", 2
+   jump: mainloop
+
+   label: darsius_light_spell_label
+   castspell: "Darsius", 3
+   jump: mainloop
+
+   label: darsius_drain_spell_label
+   castspell: "Darsius", 4
+   jump: mainloop
+
+   label: darsius_drain2_spell_label
+   castspell: "Darsius", 5
+   jump: mainloop
+
+   label: darsius_enchant_spell_label
+   castspell: "Darsius", 6
+   jump: mainloop
+
+   label: darsius_fear_spell_label
+   castspell: "Darsius", 7
+   jump: mainloop
+
+# These are the labels for the Game Controls...
+   label: load_game_label
+   console: You open the Load record...
+   loadwait: 0
+   jump: mainloop
+
+   label: save_game_label
+   ifenemy: nosavelabel
+   console: You open the Save record...
+   savewait: 0
+   jump: mainloop
+
+   label: journal_label
+   ifenemy: noquestlabel
+   console: You open the Quest Journal...
+   questwait: 0
+   jump: mainloop
+
+   label: help_icon_label
+   raw: "item_help"
+   jump: mainloop
+
+   label: audio_label
+   raw: "toggle_audio"
+   jump: mainloop
+
+   label: exit_label
+   raw: "exit"
+   jump: mainloop
+
+# This is for the map icon click...
+   label: map_icon_label
+   ifenemy: nomaplabel
+   console: You open the automap...
+   setcurrentmap: "pyrescove"
+   mapmode: on
+   jump: mainloop
+
+# Not allowed labels (noequip, etc...)
+   label: noequiplabel
+   console: "You cannot equip while an enemy is present."
+   jump: mainloop
+
+   label: nomovelabel
+   console: "You cannot move that way while an enemy is present."
+   jump: mainloop
+
+   label: nomaplabel
+   console: "You cannot open your automap while an enemy is present."
+   jump: mainloop
+
+   label: nosavelabel
+   console: "You cannot save while an enemy is present."
+   jump: mainloop
+
+   label: noquestlabel
+   console: "You cannot open your journal while an enemy is present."
+   jump: mainloop
+
+# Potion usage
+   # Persephone Health potion...
+   label: p_use_hpotion
+   usepotion: "Persephone", hpotion
+   jump: mainloop
+
+   # Persephone Magic potion...
+   label: p_use_mpotion
+   usepotion: "Persephone", mpotion
+   jump: mainloop
+
+   # Persephone Fairy Salve...
+   label: p_use_salve
+   usepotion: "Persephone", fairysalve
+   jump: mainloop
+
+   # Darsius Health potion...
+   label: d_use_hpotion
+   usepotion: "Darsius", hpotion
+   jump: mainloop
+
+   # Darsius Magic potion...
+   label: d_use_mpotion
+   usepotion: "Darsius", mpotion
+   jump: mainloop
+
+   # Darsius Fairy Salve...
+   label: d_use_salve
+   usepotion: "Darsius", fairysalve
+   jump: mainloop
+
+# Reading a book (when clicked on party member)
+   label: read_book_label
+   ifenemy: no_read_enemy
+   console: "You open the book..."
+   raw: "set_book_cursor"
+   playwav: "audio/sfx/bookopen.wav"
+   showbookanim: 0
+   raw: "show_book"
+   bookwaitx: 0
+   raw: "hide_book"
+   jump: mainloop
+
+   label: no_read_enemy
+   console: "You cannot read a book while an enemy is present."
+   jump: mainloop
+####################################################################################
+# These are for the mini-map movement directions (and even the WASD movements)
+   label: up_map_label
+   ifenemy: nomovelabel
+   move: "rp0002.txt"
+   jump: mainloop
+
+   label: uplabel2
+   ifenemy: nomovelabel
+   move: "rp0002.txt"
+   jump: mainloop
+
+# Fandriel interactions
+   label: fandriel_label
+   # Make sure Persephone is alive for this
+   raw: "persephone_dead_check"
+   playwav: "audio/voice/fandriel01.wav"
+   console: "Fandriel: 'Hello Princess! How can I be of service?'"
+   showanim: lip/fandriel_speech01.txt, fandriel_speech01
+   menu: 4, op4("Goodbye"), op3("Who are you?"), op2("Why am I here?"), op1("Where am I?")
+   jump: mainloop
+
+   label: op1
+   playwav: "audio/voice/pspeech0001.wav"
+   console: "Persephone: 'Pardon me, but where am I?'"
+   showanim: lip/pspeech0001.txt, pspeech0001
+   playwav: "audio/voice/fandriel02.wav"
+   console: "Fandriel: 'This is Pyre's Cove...a cave town in the Hearthshire province.'"
+   showanim: lip/fandriel_speech02.txt, fandriel_speech02
+   jump: fandriel_loopback
+
+   label: op2
+   playwav: "audio/voice/pspeech0002.wav"
+   console: "Persephone: 'How did I get here?'
+   showanim: lip/pspeech0002.txt, pspeech0002
+   ifbool: 25, true, skip_quest_label
+   label: skip_back
+   ifbool: 19, false, find_darsius_label
+   playwav: "audio/voice/fandriel03.wav"
+   console: "Fandriel: 'You passed out from smoke inhalation. A young man brought you here. He may still be around here somewhere.'"
+   showanim: lip/fandriel_speech03.txt, fandriel_speech03
+   jump: fandriel_loopback
+
+   label: skip_quest_label
+   set: "bool", 19, true
+   jump: skip_back
+
+   label: op3
+   playwav: "audio/voice/pspeech0003.wav"
+   console: "Persephone: 'May I ask who you are?'
+   showanim: lip/pspeech0003.txt, pspeech0003
+   playwav: "audio/voice/fandriel04.wav"
+   console: "Fandriel: 'I am Fandriel. I am the town healer.'"
+   showanim: lip/fandriel_speech04.txt, fandriel_speech04
+   jump: fandriel_loopback
+
+   label: op4
+   playwav: "audio/voice/pspeech0004.wav"
+   console: "Persephone: 'Good day.'
+   showanim: lip/pspeech0004.txt, pspeech0004
+   clear: console
+   jump: mainloop
+
+   # "Loop back" to the conversation?
+   label: fandriel_loopback
+   menu: 4, op4("Goodbye"), op3("Who are you?"), op2("Why am I here?"), op1("Where am I?")
+   jump: mainloop
+
+   label: find_darsius_label
+   playwav: "audio/voice/fandriel03.wav"
+   console: "Fandriel: 'You passed out from smoke inhalation. A young man brought you here. He may still be around here somewhere.'"
+   showanim: lip/fandriel_speech03.txt, fandriel_speech03
+   dialognoanim: "Fandriel: 'You passed out from smoke inhalation. A young man brought you here. He may still be around here somewhere.'"
+   assignquest: find_darsius.txt
+   playwav: "audio/sfx/alert.wav"
+   set: "bool", 19, true
+   jump: fandriel_loopback
+
+# Nightstand interactions
+   label: nightstand1_label
+   console: "This is a rustic but charming looking nightstand."
+   jump: mainloop
+
+   label: nightstand2_label
+   # Check for if we found the red rose petals or not (For the health potion quest)
+   ifbool: 20, true, already_taken_label
+   ifncursor: notake
+   playwav: "audio/sfx/open_drawer.wav"
+   console: "You search the nightstand and find Red Petal Powder."
+   set: "bool", 20, true
+   setcursor: red_petals, "Red Petal Powder"
+   markquestaction: craft0001
+   jump: mainloop
+
+   label: already_taken_label
+   console: "There is nothing further of interest in the nightstand."
+   jump: mainloop
+
+# Candle look
+   label: candle_label
+   console: "The candle dances with an eerie flame."
+   jump: mainloop
+
+# Ale look
+   label: ale_label
+   console: "This is a tasty looking mug of Hearthshire Ale."
+   jump: mainloop
+
+# Banner (pennant) look
+   label: pennant_label
+   label: pennant_label1
+   console: "This is the official banner of the province of Hearthshire."
+   jump: mainloop
+
+# Chest look
+   label: chest_label
+   console: "A majestic chest...but it is empty."
+   jump: mainloop

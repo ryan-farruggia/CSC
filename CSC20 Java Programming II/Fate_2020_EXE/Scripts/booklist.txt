@@ -1,0 +1,4 @@
+booklist_table
+bookCursorText*bookAnimTag*bookAnimLastFrame*bookScriptFile
+Blue Book I*blue_book*bluebook12*bluebook1.txt
+Red Book I*red_book*redbook12*redbook1.txt

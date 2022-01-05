@@ -1,0 +1,2 @@
+pyrescove*labeltest
+hearthshire*label_hearthshire

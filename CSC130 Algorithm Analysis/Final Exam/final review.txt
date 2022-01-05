@@ -1,0 +1,89 @@
+Chapter 1:
+Algorithmics
+Time Complexity Basics
+Big-O Notation
+Big-O Math
+
+Chapter 2:
+What an ADT specifies
+Bags
+Queues
+Stacks
+Deques
+
+Chapter 3:
+Variable Scope
+System Stack
+System Heap
+Loitering
+Pools
+Recursion
+
+Chapter 4:
+Prefix, Postfix, Infix
+Shunting Yard Algorithm
+
+Chapter 5:
+Binary Search
+Bubble Sort
+Selection Sort
+Insertion Sort
+Shell Sort
+All complexities of these
+
+Chapter 6:
+Merging arrays
+Merge sort
+Quick sort
+
+Chapter 7:
+Dictionaries
+Bucket Sort
+Radix Sort
+
+Chapter 8:
+Tree terminology
+Trees are recursively defined
+Tree traversals
+Binary trees
+
+Chapter 9:
+Heaps (min and max)
+Priority Queues
+Heaps in arrays (math)
+Heap sort
+
+Chapter 10:
+Binary Search Trees (BST)
+Dangers of BST's
+
+Chapter 11:
+2-3 Trees
+AVL Trees
+Red-Black Trees (what they really are)
+
+Chapter 12:
+General approach of hash tables
+Hash functions
+Open hashing
+Closed hashing
+
+Chapter 13:
+Union-find
+Bit Vectors
+
+Chapter 14:
+Graph terminology
+Definition of trees
+Cycles
+Weighted Graphs
+Directed Graphs
+
+Chapter 15:
+Unpracticality of brute force
+Kruskal algorithm
+Prim-Jarnik Algorithm
+
+Chapter 16:
+Dijkstra's Shortest Path Algorithm
+Concepts, Importance, differences from minimum span tree

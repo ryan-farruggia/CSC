@@ -1,0 +1,11 @@
+300
+loop
+fandriel1, 690, 370
+fandriel2, 690, 370
+fandriel3, 690, 370
+fandriel2, 690, 370
+fandriel1, 690, 370
+fandriel1, 690, 370
+fandriel1, 690, 370
+fandriel1, 690, 370
+fandriel1, 690, 370

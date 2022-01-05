@@ -1,0 +1,6 @@
+150
+loop
+candle1, 600, 490
+candle2, 600, 490
+candle3, 600, 490
+candle2, 600, 490

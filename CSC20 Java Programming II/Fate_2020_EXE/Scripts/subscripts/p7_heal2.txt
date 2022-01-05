@@ -1,0 +1,3 @@
+# This is for Persephone's Heal II Spell loading...   
+   show: heal2icon, 1305, 1040
+   buttongx: persephone_heal2_spell_label, 1305, 1040, 1357, 1071, spell_hover, 1305, 1040, "Heal II"

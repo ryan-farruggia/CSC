@@ -1,0 +1,9 @@
+# This is for the party Persephone (with Darsius)
+   setportpics: "Persephone", 1654, 84, p1, p2, p3, p4, 0, 1
+   buttong: perse_portrait_label, 1654, 84, 1751, 181, slothover, 1654, 84
+   showx: 1, meter_shell, 1644, 176
+   meterx: red_meter1, 1674, 197, 0, 1, health
+   meterx: blue_meter1, 1719, 197, 2, 3, magic
+   buttong: perse_hp_label, 1673, 196, 1691, 326, meter_hover, 1673, 196
+   buttong: perse_mp_label, 1718, 196, 1736, 326, meter_hover, 1718, 196
+   buttongx: persephone_ice_spell_label, 1122, 1000, 1174, 1031, spell_hover, 1122, 1000, "Ice"

@@ -1,0 +1,7 @@
+100
+loop
+spider_idle1, 837, 509
+spider_idle2, 837, 509
+spider_idle1, 837, 509
+spider_idle1, 837, 509
+spider_idle1, 837, 509

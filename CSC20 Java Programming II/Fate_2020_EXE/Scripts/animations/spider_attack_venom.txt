@@ -1,0 +1,16 @@
+34
+cinematic
+spit1, 837, 509
+spit2, 837, 509
+spit3, 837, 509
+spit4, 837, 509
+spit5, 837, 509
+spit5, 837, 509
+spit6, 837, 509
+spit6, 837, 509
+spit6, 837, 509
+spit7, 837, 509
+spit7, 837, 509
+spit7, 837, 509
+spit7, 837, 509
+null

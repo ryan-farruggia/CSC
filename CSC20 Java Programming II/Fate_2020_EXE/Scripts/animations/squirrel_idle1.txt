@@ -1,0 +1,10 @@
+100
+loop
+squirrel_idle1, 751, 587
+squirrel_idle2, 751, 587
+squirrel_idle1, 751, 587
+squirrel_idle2, 751, 587
+squirrel_idle3, 751, 587
+squirrel_idle4, 751, 587
+squirrel_idle3, 751, 587
+squirrel_idle4, 751, 587

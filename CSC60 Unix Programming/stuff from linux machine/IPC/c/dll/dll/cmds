@@ -1,0 +1,5 @@
+ gcc -g -c -fPIC -Wall add.c sub.c mult.c
+gcc -g -shared -Wl,-soname,libmycalc.so -o libcalc.so add.o sub.o mult.o
+ gcc -g -Wall calc.c libcalc.so
+ ln -s libcalc.so libmycalc.so
+LD_LIBRARY_PATH=. ./a.out

@@ -1,0 +1,44 @@
+many Q's are hand-sorting
+
+Part 8:
+tree terminology
+trees are recursively defined
+tree traversals
+binary trees
+
+Part 9:
+Heaps (min and max heaps)
+Priority Queues
+Heaps in arrays (the math)
+Heap Sort
+
+Part 10:
+Binary Search Trees (BST)
+Dangers of BST's
+
+Part 11:
+2-3 Trees
+AVL Trees
+Red-Black Trees - what they really are
+
+Part 12:
+General approach of Hash Tables
+Hash Functions
+Open Hashing
+Closed Hashing
+
+Part 13:
+Union Find
+Bit Vectors
+
+Part 14:
+Graph terminology
+Definition of trees
+Cycles
+Weighted Graphs
+Directed Graphs
+
+Part 15:
+Unpracticality of Brute Force
+Kruskal Algorithm
+Prim-Jarnik Algorithm

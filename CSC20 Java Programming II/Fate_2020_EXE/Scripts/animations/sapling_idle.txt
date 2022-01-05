@@ -1,0 +1,6 @@
+300
+loop
+sapling_idle1, 926, 574
+sapling_idle2, 926, 574
+sapling_idle1, 926, 574
+sapling_idle1, 926, 574

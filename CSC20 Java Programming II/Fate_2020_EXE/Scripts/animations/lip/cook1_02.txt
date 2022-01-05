@@ -1,0 +1,34 @@
+888
+speech
+1017,262, p1, 322
+1017,262, cook1_o, 105
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_aei, 105
+1017,262, cook1_qw, 105
+1017,262, cook1_aei, 110
+1017,262, p1, 31
+1017,262, cook1_aei, 105
+1017,262, cook1_r, 105
+1017,262, cook1_aei, 105
+1017,262, cook1_fv, 121
+1017,262, p1, 54
+1017,262, cook1_l, 105
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_bmp, 105
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_aei, 105
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_r, 130
+1017,262, p1, 22
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_bmp, 173
+1017,262, p1, 25
+1017,262, cook1_o, 105
+1017,262, cook1_aei, 105
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_th, 105
+1017,262, cook1_cdgknstxyz, 105
+1017,262, cook1_aei, 105
+1017,262, cook1_fv, 105
+1017,262, cook1_o, 160
+1017,262, p1, 657

@@ -1,0 +1,29 @@
+REPETITIVE INFORMATION:
+
+"is good" = keep old pdf values, dropdowns, etc.
+
+project description for certain projects like inspections
+contract number/county/route/pm
+district dropdown is good (01-12)
+WDID
+IQA REVIEWER name
+resident engineer
+resident engineer phone number
+review date (should give a calendar)
+construction company name
+water pollution control manager
+weather conditions are good
+project risk level is good (1, 2, 3, tahoe)
+receiving water body
+percent complete by time is good
+total disturbed soil area DSA good
+active dsa good
+inactive dsa good
+SWPPP OR WPCP is good (dropdown pick either one or 'none')
+RWQCB (regional board) (S) is good
+PLACS is good (dropdown)
+oversight is good (yes or no)
+lead agency?
+
+there is a word document corresponding to each dropdown item and the dropdowns should have that info stored in them
+some info should auto-populate based on what the user enters (e.g. TC1.4 autofills another box with its info)

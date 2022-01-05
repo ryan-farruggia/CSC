@@ -1,0 +1,35 @@
+# This stuff is ALWAYS the header...
+   label: start
+   clear: all
+   inventory: off
+   timeofday: off
+
+# Set music and ambient (if needed)
+   show: vidborder, 0, 0
+   #setambientaudio: "audio/ambient/pc_cave.wav"
+   #setmusic: "audio/music/pc.wav"
+
+# Specific frames, etc...
+   show: convotest, 320, 180
+
+# Conversation tree
+   vconsole: "Princess Persephone...what do you think about Nexa?"
+   menu: 2, op2("Nexa is just doing her job"), op1("We must stop her!")
+####################################################################################
+# This is the mainloop (always the same)
+   label: mainloop
+   clickwait: 0
+   jump: mainloop
+####################################################################################
+# This is the universal label to escape a convo vid script...
+   label: escape_label
+   move: "rp0001.txt"
+   jump: mainloop
+
+# These are the conversation tree options
+   label: op1
+   playvid: "vids/fadetest/script.txt"
+   jump: mainloop
+
+   label: op2
+   jump: escape_label

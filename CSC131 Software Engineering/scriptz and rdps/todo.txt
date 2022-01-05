@@ -1,0 +1,9 @@
+find a way to lock the form
+find a way to add shit to page 2
+find a way to copy entire pages
+|
+-> for loop using current pagenum
+(this.pageNum) and change the name of the
+field being retrieved based on naming
+convention used by acrobat to rename
+fields after duplicating them

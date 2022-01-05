@@ -1,0 +1,3 @@
+# This is for Darsius Ice Spell loading...   
+   show: d_iceicon, 1439, 1000
+   buttongx: darsius_ice_spell_label, 1439, 1000, 1491, 1031, spell_hover, 1439, 1000, "Ice"

@@ -1,0 +1,11 @@
+300
+loop
+peddler_idle1, 1027, 281
+peddler_idle2, 1027, 281
+peddler_idle3, 1027, 281
+peddler_idle2, 1027, 281
+peddler_idle1, 1027, 281
+peddler_idle1, 1027, 281
+peddler_idle1, 1027, 281
+peddler_idle1, 1027, 281
+peddler_idle1, 1027, 281

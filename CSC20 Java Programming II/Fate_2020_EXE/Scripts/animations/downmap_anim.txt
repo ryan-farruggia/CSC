@@ -1,0 +1,12 @@
+100
+loop
+dmap1, 0, 0
+dmap2, 0, 0
+dmap3, 0, 0
+dmap4, 0, 0
+dmap5, 0, 0
+dmap6, 0, 0
+dmap5, 0, 0
+dmap4, 0, 0
+dmap3, 0, 0
+dmap2, 0, 0

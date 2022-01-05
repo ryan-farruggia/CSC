@@ -1,0 +1,3 @@
+# This is for Darsius Cyclone Spell loading...   
+   show: d_cycloneicon, 1500, 1000
+   buttongx: darsius_cyclone_spell_label, 1500, 1000, 1552, 1031, spell_hover, 1500, 1000, "Cyclone"

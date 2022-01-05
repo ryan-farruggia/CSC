@@ -1,0 +1,11 @@
+300
+loop
+herbalist_idle1, 1025, 242
+herbalist_idle2, 1025, 242
+herbalist_idle3, 1025, 242
+herbalist_idle2, 1025, 242
+herbalist_idle1, 1025, 242
+herbalist_idle1, 1025, 242
+herbalist_idle1, 1025, 242
+herbalist_idle1, 1025, 242
+herbalist_idle1, 1025, 242

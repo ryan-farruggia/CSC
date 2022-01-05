@@ -1,0 +1,10 @@
+# This is for the party Darsius
+   show: d_control, 1368, 963
+   buttongx: darsius_fire_spell_label, 1378, 1000, 1430, 1031, spell_hover, 1378, 1000, "Fire"
+   setportpics: "Darsius", 1813, 84, d1, d2, d3, d4, 4, 5
+   buttong: dar_portrait_label, 1813, 84, 1910, 181, slothover, 1813, 84
+   showx: 1, meter_shell2, 1803, 176
+   meterx: red_meter2, 1833, 197, 4, 5, health
+   meterx: blue_meter2, 1878, 197, 6, 7, magic
+   buttong: dar_hp_label, 1832, 196, 1850, 326, meter_hover, 1832, 196
+   buttong: dar_mp_label, 1877, 196, 1895, 326, meter_hover, 1877, 196

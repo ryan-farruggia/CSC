@@ -1,0 +1,11 @@
+290
+loop
+darsius_idle1, 750, 250
+darsius_idle2, 750, 250
+darsius_idle3, 750, 250
+darsius_idle2, 750, 250
+darsius_idle1, 750, 250
+darsius_idle1, 750, 250
+darsius_idle1, 750, 250
+darsius_idle1, 750, 250
+darsius_idle1, 750, 250

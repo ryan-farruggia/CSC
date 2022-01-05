@@ -1,0 +1,15 @@
+# This is for the UI stuff that doesn't have another place to go...
+   show: ui_rail, 0, 915
+   showx: 1, gp_overlay, 1654, 10
+   # These are pending map sprites
+   showx: 1, minimap, 1728, 722
+   showx: 1, mapicon, 1654, 817
+   # These are the Game Controls
+   buttongx: load_game_label, 1632, 992, 1672, 1024, game_hover, 1632, 992, "Load"
+   buttongx: save_game_label, 1680, 992, 1720, 1024, game_hover, 1680, 992, "Save"
+   buttongx: journal_label, 1728, 992, 1768, 1024, game_hover, 1728, 992, "Journal"
+   buttongx: help_icon_label, 1776, 992, 1816, 1024, game_hover, 1776, 992, "Help"
+   buttongx: audio_label, 1824, 992, 1864, 1024, game_hover, 1824, 992, "Audio"
+   buttongx: exit_label, 1872, 992, 1912, 1024, game_hover, 1872, 992, "Exit"
+   # This is the map icon
+   buttong: map_icon_label, 1654, 817, 1751, 914, slothover, 1654, 817

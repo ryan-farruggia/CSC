@@ -1,0 +1,430 @@
+# This stuff is ALWAYS the header...
+   label: start
+   clear: all
+   inventory: on
+   timeofday: off
+
+# Update the party for the Equip engine...
+   updateparty: 0
+
+# This is level specific (load bg, show viewport, non-takeable buttons)
+   bg: room0007
+   raw: "dust_room_particle"
+   raw: "display_gp"
+   setambientaudio: "audio/ambient/pc_cave.wav"
+   setmusic: "audio/music/pc.wav"
+
+# This is UI overlay stuff
+   loadsub: ui.txt
+
+# This is the portrait and meter set up
+   ifnbool: 0, true, soloload
+   # Load the party
+      loadsub: persephone_party.txt
+      # Add Darsius stuff here too (profile, meter, controls, etc.)
+      loadsub: darsius_party.txt
+      ifboolx: 9, true, d1_ice.txt
+      ifboolx: 10, true, d2_cyclone.txt
+      ifboolx: 11, true, d3_lightning.txt
+      ifboolx: 12, true, d4_drain.txt
+      ifboolx: 13, true, d5_drain2.txt
+      ifboolx: 14, true, d6_enchant.txt
+      ifboolx: 15, true, d7_fear.txt
+      jump: aftersoloload
+   label: soloload
+      loadsub: persephone_solo.txt
+   label: aftersoloload
+
+#Check out Persephone's Controls...
+   ifboolx: 2, true, p1_fire.txt
+   ifboolx: 3, true, p2_cyclone.txt
+   ifboolx: 4, true, p3_lightning.txt
+   ifboolx: 5, true, p4_ward.txt
+   ifboolx: 6, true, p5_ward2.txt
+   ifboolx: 7, true, p6_heal.txt
+   ifboolx: 8, true, p7_heal2.txt
+
+# Set up the automap?
+   minimaplocation: "Pyre's Cove"
+   minimaplayout: "NS"
+   setautomap: pyrescove, 6, 4, "ar30", rp0007.txt
+
+# Decor
+   show: dining_table, 0, 230
+   show: ale, 489, 514
+   show: crate50, 1675, 369
+   show: barrel60, 1735, 490
+   showanim: candle3.txt, candle3
+   showanim: candle4.txt, candle4
+   button: ale_label, 502, 519, 555, 589, "Ale"
+   button: candle_label, 1053, 520, 1093, 577, "Candle"
+   button: candle_label2, 255, 518, 293, 579, "Candle"
+   button: barrel_label, 1734, 490, 1904, 710, "Barrel"
+   button: crate_label, 1682, 375, 1848, 557, "Crate"
+
+# Sage
+   showanim: sage.txt, sage
+   showanim: sage_blink.txt, sageblink
+   button: sage_label, 592, 320, 770, 807, "Luris"
+
+# Direction viewport arrow(s)
+   buttong: downlabel2, 80, 840, 1580, 911, downcursor, -100, -100
+   buttong: uplabel2, 1160, 240, 1500, 410, upcursor, -100, -100
+####################################################################################
+# This is the mainloop (always the same)
+   label: mainloop
+   clickwait: 0
+   jump: mainloop
+
+# Cannot pick up items because cursor and/or inventory space is an issue
+   label: notake
+   console: "No room to take item right now!"
+   jump: mainloop
+
+# This is the status of the HP/MP (meter bar click)
+   label: perse_hp_label
+   displaypstring: "Persephone", "hp", 0, 1
+   jump: mainloop
+
+   label: perse_mp_label
+   displaypstring: "Persephone", "mp", 2, 3
+   jump: mainloop
+
+   label: dar_hp_label
+   displaypstring: "Darsius", "hp", 4, 5
+   jump: mainloop
+
+   label: dar_mp_label
+   displaypstring: "Darsius", "mp", 6, 7
+   jump: mainloop
+
+# This is clicking Persephone's portrait
+   label: perse_portrait_label
+   ifcursortext: "H.Potion", p_use_hpotion
+   ifcursortext: "Health Potion", p_use_hpotion
+   ifcursortext: "Magic Potion", p_use_mpotion
+   ifcursortext: "Fairy Salve", p_use_salve
+   ifcursorbook: read_book_label
+   label: perse_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Persephone's Equip/Stats page...
+   equipwait: "Persephone"
+   console: You close Persephone's Equip/Stats page...
+   jump: mainloop
+
+# This is clicking Darsius' portrait
+   label: dar_portrait_label
+   ifcursortext: "H.Potion", d_use_hpotion
+   ifcursortext: "Health Potion", d_use_hpotion
+   ifcursortext: "Magic Potion", d_use_mpotion
+   ifcursortext: "Fairy Salve", d_use_salve
+   ifcursorbook: read_book_label
+   label: dar_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Darsius' Equip/Stats page...
+   equipwait: "Darsius"
+   console: You close Darsius' Equip/Stats page...
+   jump: mainloop
+
+# This is Persephone's Clicked Spell Icons
+   label: persephone_ice_spell_label
+   castspell: "Persephone", 0
+   jump: mainloop
+
+   label: persephone_fire_spell_label
+   castspell: "Persephone", 1
+   jump: mainloop
+
+   label: persephone_cyclone_spell_label
+   castspell: "Persephone", 2
+   jump: mainloop
+
+   label: persephone_lightning_spell_label
+   castspell: "Persephone", 3
+   jump: mainloop
+
+   label: persephone_ward_spell_label
+   castspell: "Persephone", 4
+   jump: mainloop
+
+   label: persephone_ward2_spell_label
+   castspell: "Persephone", 5
+   jump: mainloop
+
+   label: persephone_heal_spell_label
+   castspell: "Persephone", 6
+   jump: mainloop
+
+   label: persephone_heal2_spell_label
+   castspell: "Persephone", 7
+   jump: mainloop
+
+# This is Darsius' Clicked Spell Icons
+   label: darsius_fire_spell_label
+   castspell: "Darsius", 0
+   jump: mainloop
+
+   label: darsius_ice_spell_label
+   castspell: "Darsius", 1
+   jump: mainloop
+
+   label: darsius_cyclone_spell_label
+   castspell: "Darsius", 2
+   jump: mainloop
+
+   label: darsius_light_spell_label
+   castspell: "Darsius", 3
+   jump: mainloop
+
+   label: darsius_drain_spell_label
+   castspell: "Darsius", 4
+   jump: mainloop
+
+   label: darsius_drain2_spell_label
+   castspell: "Darsius", 5
+   jump: mainloop
+
+   label: darsius_enchant_spell_label
+   castspell: "Darsius", 6
+   jump: mainloop
+
+   label: darsius_fear_spell_label
+   castspell: "Darsius", 7
+   jump: mainloop
+
+# These are the labels for the Game Controls...
+   label: load_game_label
+   console: You open the Load record...
+   loadwait: 0
+   jump: mainloop
+
+   label: save_game_label
+   ifenemy: nosavelabel
+   console: You open the Save record...
+   savewait: 0
+   jump: mainloop
+
+   label: journal_label
+   ifenemy: noquestlabel
+   console: You open the Quest Journal...
+   questwait: 0
+   jump: mainloop
+
+   label: help_icon_label
+   raw: "item_help"
+   jump: mainloop
+
+   label: audio_label
+   raw: "toggle_audio"
+   jump: mainloop
+
+   label: exit_label
+   raw: "exit"
+   jump: mainloop
+
+# This is for the map icon click...
+   label: map_icon_label
+   ifenemy: nomaplabel
+   console: You open the automap...
+   setcurrentmap: "pyrescove"
+   mapmode: on
+   jump: mainloop
+
+# Not allowed labels (noequip, etc...)
+   label: noequiplabel
+   console: "You cannot equip while an enemy is present."
+   jump: mainloop
+
+   label: nomovelabel
+   console: "You cannot move that way while an enemy is present."
+   jump: mainloop
+
+   label: nomaplabel
+   console: "You cannot open your automap while an enemy is present."
+   jump: mainloop
+
+   label: nosavelabel
+   console: "You cannot save while an enemy is present."
+   jump: mainloop
+
+   label: noquestlabel
+   console: "You cannot open your journal while an enemy is present."
+   jump: mainloop
+
+# Potion usage
+   # Persephone Health potion...
+   label: p_use_hpotion
+   usepotion: "Persephone", hpotion
+   jump: mainloop
+
+   # Persephone Magic potion...
+   label: p_use_mpotion
+   usepotion: "Persephone", mpotion
+   jump: mainloop
+
+   # Persephone Fairy Salve...
+   label: p_use_salve
+   usepotion: "Persephone", fairysalve
+   jump: mainloop
+
+   # Darsius Health potion...
+   label: d_use_hpotion
+   usepotion: "Darsius", hpotion
+   jump: mainloop
+
+   # Darsius Magic potion...
+   label: d_use_mpotion
+   usepotion: "Darsius", mpotion
+   jump: mainloop
+
+   # Darsius Fairy Salve...
+   label: d_use_salve
+   usepotion: "Darsius", fairysalve
+   jump: mainloop
+
+# Reading a book (when clicked on party member)
+   label: read_book_label
+   ifenemy: no_read_enemy
+   console: "You open the book..."
+   raw: "set_book_cursor"
+   playwav: "audio/sfx/bookopen.wav"
+   showbookanim: 0
+   raw: "show_book"
+   bookwaitx: 0
+   raw: "hide_book"
+   jump: mainloop
+
+   label: no_read_enemy
+   console: "You cannot read a book while an enemy is present."
+   jump: mainloop
+####################################################################################
+# These are for the mini-map movement directions (and even the WASD movements)
+   label: down_map_label
+   label: downlabel2
+   ifenemy: nomovelabel
+   move: "rp0006.txt"
+   jump: mainloop
+
+   label: up_map_label
+   label: uplabel2
+   ifenemy: nomovelabel
+   move: "rp0008.txt"
+   jump: mainloop
+
+# Decor look
+   label: ale_label
+   console: "Only a tankard of Hearthshire's finest for the town sage."
+   jump: mainloop
+
+   label: candle_label
+   label: candle_label2
+   console: "The gentle flicker of the candle makes you a bit sleepy."
+   jump: mainloop
+
+   label: barrel_label
+   console: "This barrel likely contains some type of fermented beverage."
+   jump: mainloop
+
+   label: crate_label
+   console: "This crate contains goods used in the kitchen."
+   jump: mainloop
+
+# Sage Luris
+   label: sage_label
+   raw: "persephone_dead_check"
+   ifstate: 1, 0, convo_tree0
+   ifstate: 1, 1, convo_tree1
+   jump: mainloop
+
+   label: convo_tree0
+   # First conversation tree...
+   playwav: "audio/voice/sage01.wav"
+   console: "Luris: 'Hello, miss...can I help you?'"
+   showanim: lip/sage_speech01.txt, sage_speech01
+   label: sage_loopback1
+   menu: 4, tree1op4("Goodbye"), tree1op3("Who are you?"), tree1op2("Can you help me?"), tree1op1("Why do you live in a cave?")
+   jump: mainloop
+
+   label: tree1op1:
+   playwav: "audio/voice/pspeech0005.wav"
+   console: "Persephone: 'How come you live in a cave?'"
+   showanim: lip/pspeech0005.txt, pspeech0005
+   playwav: "audio/voice/sage02.wav"
+   console: "Luris: 'My ancestors founded this cave town. It was secure, warm, and free which worked for them back then.'"
+   showanim: lip/sage_speech02.txt, sage_speech02
+   jump: sage_loopback1
+
+   label: tree1op2:
+   playwav: "audio/voice/pspeech0006.wav"
+   console: "Persephone: 'Is there anything you can do to help me?'"
+   showanim: lip/pspeech0006.txt, pspeech0006
+   ifncursor: luris_nogive
+   playwav: "audio/voice/sage03.wav"
+   console: "Luris: 'Well, I do know a little about alchemy. Take these silver salts and put them to good use.'"
+   showanim: lip/sage_speech03.txt, sage_speech03
+   dialognoanim: "Luris: 'Well, I do know a little about alchemy. Take these silver salts and put them to good use.'"
+   playwav: "audio/sfx/salt.wav"
+   console: "The Silver Salt was taken."
+   set: "state", 1, 1
+   setcursor: silver_salt, "Silver Salt"
+   markquestaction: craft0002
+   jump: sage_loopback2
+
+   label: luris_nogive
+   playwav: "audio/voice/sage04.wav"
+   console: "Luris: 'I would give you something but it looks like your hands are full.'"
+   showanim: lip/sage_speech04.txt, sage_speech04
+   jump: mainloop
+
+   label: tree1op3:
+   playwav: "audio/voice/pspeech0007.wav"
+   console: "Persephone: 'Who are you?'"
+   showanim: lip/pspeech0007.txt, pspeech0007
+   playwav: "audio/voice/sage05.wav"
+   console: "Luris: 'I am called Luris. I am the sage of this town.'"
+   showanim: lip/sage_speech05.txt, sage_speech05
+   jump: sage_loopback1
+
+   label: tree1op4:
+   playwav: "audio/voice/pspeech0009.wav"
+   console: "Persephone: 'Goodbye.'"
+   showanim: lip/pspeech0009.txt, pspeech0009
+   jump: mainloop
+
+   label: convo_tree1
+   # Second conversation tree...
+   playwav: "audio/voice/sage01.wav"
+   console: "Luris: 'Hello, miss...can I help you?'"
+   showanim: lip/sage_speech01.txt, sage_speech01
+   label: sage_loopback2
+   menu: 4, tree1op4("Goodbye"), tree2op3("Who are you?"), tree2op2("Thank you for your help"), tree2op1("Why do you live in a cave?")
+   jump: mainloop
+
+   label: tree2op1
+   playwav: "audio/voice/pspeech0005.wav"
+   console: "Persephone: 'How come you live in a cave?'"
+   showanim: lip/pspeech0005.txt, pspeech0005
+   playwav: "audio/voice/sage02.wav"
+   console: "Luris: 'My ancestors founded this cave town. It was secure, warm, and free which worked for them back then.'"
+   showanim: lip/sage_speech02.txt, sage_speech02
+   jump: sage_loopback2
+
+   label: tree2op2
+   playwav: "audio/voice/pspeech0008.wav"
+   console: "Persephone: 'I appreciate your help...thank you.'"
+   showanim: lip/pspeech0008.txt, pspeech0008
+   playwav: "audio/voice/sage06.wav"
+   console: "Luris: 'I know it is not much but hopefully it will help.'"
+   showanim: lip/sage_speech06.txt, sage_speech06
+   jump: sage_loopback2
+
+   label: tree2op3
+   playwav: "audio/voice/pspeech0007.wav"
+   console: "Persephone: 'Who are you?'"
+   showanim: lip/pspeech0007.txt, pspeech0007
+   playwav: "audio/voice/sage05.wav"
+   console: "Luris: 'I am called Luris. I am the sage of this town.'"
+   showanim: lip/sage_speech05.txt, sage_speech05
+   jump: sage_loopback2

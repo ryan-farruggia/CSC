@@ -1,0 +1,5 @@
+gcc -c add.c
+gcc -shared -o libmyadd.so add.o
+gcc -c main.c
+#gcc -L. -Wl,-rpath=./ -Wall -o test main.c -lmycalc 
+gcc -o calc main.o ./libmyadd.so

@@ -1,0 +1,22 @@
+☑ unsigned vs signed
+☑ converting signed/unsigned to binary
+☑ minimum # of bits for integers
+☑ binary addition/subtraction
+☑ x86 'next instruction' (EIP)
+☑ correct declaration of arrays
+☑ little endian arrangement
+☑ keeping track of register values
+☑ counting ascii chars
+☑ writing from high-level to asm
+☑ WriteString, WriteChar, ReadChar
+☑ procedure (proc)
+☑ call
+☑ passing params
+☑ OFFSET
+☑ ret
+☑ AND, OR, XOR, NOT
+☑ operations on hex #'s (30h, 12h, etc)
+☑ push, pop
+☑ bracket syntax - BYTE PTR [varD+1]
+☑ JZ, JNZ, JE, JNE, JA, JB
+PTR, CMP, TEST

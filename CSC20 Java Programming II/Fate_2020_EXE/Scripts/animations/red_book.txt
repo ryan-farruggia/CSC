@@ -1,0 +1,14 @@
+50
+speech
+500, 140, redbook1, 50
+500, 140, redbook2, 50
+500, 140, redbook3, 50
+500, 140, redbook4, 50
+500, 140, redbook5, 50
+500, 140, redbook6, 50
+500, 140, redbook7, 50
+500, 140, redbook8, 50
+500, 140, redbook9, 50
+500, 140, redbook10, 50
+500, 140, redbook11, 50
+500, 140, redbook12, 50

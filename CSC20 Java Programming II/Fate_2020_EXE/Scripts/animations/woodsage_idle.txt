@@ -1,0 +1,11 @@
+300
+loop
+forest_sage_idle1, 660, 41
+forest_sage_idle2, 660, 41
+forest_sage_idle3, 660, 41
+forest_sage_idle2, 660, 41
+forest_sage_idle1, 660, 41
+forest_sage_idle1, 660, 41
+forest_sage_idle1, 660, 41
+forest_sage_idle1, 660, 41
+forest_sage_idle1, 660, 41

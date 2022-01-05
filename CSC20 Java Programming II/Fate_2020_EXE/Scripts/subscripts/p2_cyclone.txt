@@ -1,0 +1,3 @@
+# This is for Persephone's Cyclone Spell loading...   
+   show: cycloneicon, 1244, 1000
+   buttongx: persephone_cyclone_spell_label, 1244, 1000, 1296, 1031, spell_hover, 1244, 1000, "Cyclone"

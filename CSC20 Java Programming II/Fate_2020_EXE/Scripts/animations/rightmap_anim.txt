@@ -1,0 +1,12 @@
+100
+loop
+rmap1, 0, 0
+rmap2, 0, 0
+rmap3, 0, 0
+rmap4, 0, 0
+rmap5, 0, 0
+rmap6, 0, 0
+rmap5, 0, 0
+rmap4, 0, 0
+rmap3, 0, 0
+rmap2, 0, 0

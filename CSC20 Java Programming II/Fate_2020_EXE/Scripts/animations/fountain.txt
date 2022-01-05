@@ -1,0 +1,5 @@
+200
+loop
+fountain1, 1057, 191
+fountain2, 1057, 191
+fountain3, 1057, 191

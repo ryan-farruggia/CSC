@@ -1,0 +1,361 @@
+# This stuff is ALWAYS the header...
+   label: start
+     ifloadflag: false, afterloadflag
+     set: "bool", 99, true
+     label: afterloadflag
+   clear: all
+   inventory: on
+   timeofday: on
+
+# Update the party for the Equip engine...
+   updateparty: 0
+
+# This is level specific (load bg, show viewport, non-takeable buttons)
+   bg: room0014
+   raw: "rain_room_particle"
+   raw: "display_gp"
+   setambientaudio: "audio/ambient/hearth_forest.wav"
+   setmusic: "audio/music/hearthshire.wav"
+
+# This is UI overlay stuff
+   loadsub: ui.txt
+
+# This is the portrait and meter set up
+   ifnbool: 0, true, soloload
+   # Load the party
+      loadsub: persephone_party.txt
+      # Add Darsius stuff here too (profile, meter, controls, etc.)
+      loadsub: darsius_party.txt
+      ifboolx: 9, true, d1_ice.txt
+      ifboolx: 10, true, d2_cyclone.txt
+      ifboolx: 11, true, d3_lightning.txt
+      ifboolx: 12, true, d4_drain.txt
+      ifboolx: 13, true, d5_drain2.txt
+      ifboolx: 14, true, d6_enchant.txt
+      ifboolx: 15, true, d7_fear.txt
+      jump: aftersoloload
+   label: soloload
+      loadsub: persephone_solo.txt
+   label: aftersoloload
+
+#Check out Persephone's Controls...
+   ifboolx: 2, true, p1_fire.txt
+   ifboolx: 3, true, p2_cyclone.txt
+   ifboolx: 4, true, p3_lightning.txt
+   ifboolx: 5, true, p4_ward.txt
+   ifboolx: 6, true, p5_ward2.txt
+   ifboolx: 7, true, p6_heal.txt
+   ifboolx: 8, true, p7_heal2.txt
+
+# Set up the automap?
+   minimaplocation: "Hearthshire"
+   # Default map first...
+   minimaplayout: "NS"
+   setautomap: hearthshire, 8, 3, "9d10", rp0029.txt
+
+# Decor (show)
+   show: leaf4, 768, 748
+
+# Spawn enemy lotto
+   ifbool: 99, true, after_spawn_lotto
+   ifrandom: 15, spawn_spider_label
+   label: after_spawn_lotto
+   set: "bool", 99, false
+
+# Decor (buttons)
+   button: leaf_label, 780, 765, 825, 795, "Leaf"
+   button: hollow_label, 585, 200, 695, 358, "Hollow"
+
+# Direction viewport arrow(s)
+   buttong: downlabel2, 872, 807, 1333, 911, downcursor, -100, -100
+   buttong: uplabel2, 851, 240, 1166, 559, upcursor, -100, -100
+####################################################################################
+# This is the mainloop (always the same)
+   label: mainloop
+   clickwait: 0
+   jump: mainloop
+
+# Cannot pick up items because cursor and/or inventory space is an issue
+   label: notake
+   console: "No room to take item right now!"
+   jump: mainloop
+
+# This is the status of the HP/MP (meter bar click)
+   label: perse_hp_label
+   displaypstring: "Persephone", "hp", 0, 1
+   jump: mainloop
+
+   label: perse_mp_label
+   displaypstring: "Persephone", "mp", 2, 3
+   jump: mainloop
+
+   label: dar_hp_label
+   displaypstring: "Darsius", "hp", 4, 5
+   jump: mainloop
+
+   label: dar_mp_label
+   displaypstring: "Darsius", "mp", 6, 7
+   jump: mainloop
+
+# This is clicking Persephone's portrait
+   label: perse_portrait_label
+   ifcursortext: "H.Potion", p_use_hpotion
+   ifcursortext: "Health Potion", p_use_hpotion
+   ifcursortext: "Magic Potion", p_use_mpotion
+   ifcursortext: "Fairy Salve", p_use_salve
+   ifcursorbook: read_book_label
+   label: perse_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Persephone's Equip/Stats page...
+   equipwait: "Persephone"
+   console: You close Persephone's Equip/Stats page...
+   jump: mainloop
+
+# This is clicking Darsius' portrait
+   label: dar_portrait_label
+   ifcursortext: "H.Potion", d_use_hpotion
+   ifcursortext: "Health Potion", d_use_hpotion
+   ifcursortext: "Magic Potion", d_use_mpotion
+   ifcursortext: "Fairy Salve", d_use_salve
+   ifcursorbook: read_book_label
+   label: dar_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Darsius' Equip/Stats page...
+   equipwait: "Darsius"
+   console: You close Darsius' Equip/Stats page...
+   jump: mainloop
+
+# This is Persephone's Clicked Spell Icons
+   label: persephone_ice_spell_label
+   castspell: "Persephone", 0
+   jump: mainloop
+
+   label: persephone_fire_spell_label
+   castspell: "Persephone", 1
+   jump: mainloop
+
+   label: persephone_cyclone_spell_label
+   castspell: "Persephone", 2
+   jump: mainloop
+
+   label: persephone_lightning_spell_label
+   castspell: "Persephone", 3
+   jump: mainloop
+
+   label: persephone_ward_spell_label
+   castspell: "Persephone", 4
+   jump: mainloop
+
+   label: persephone_ward2_spell_label
+   castspell: "Persephone", 5
+   jump: mainloop
+
+   label: persephone_heal_spell_label
+   castspell: "Persephone", 6
+   jump: mainloop
+
+   label: persephone_heal2_spell_label
+   castspell: "Persephone", 7
+   jump: mainloop
+
+# This is Darsius' Clicked Spell Icons
+   label: darsius_fire_spell_label
+   castspell: "Darsius", 0
+   jump: mainloop
+
+   label: darsius_ice_spell_label
+   castspell: "Darsius", 1
+   jump: mainloop
+
+   label: darsius_cyclone_spell_label
+   castspell: "Darsius", 2
+   jump: mainloop
+
+   label: darsius_light_spell_label
+   castspell: "Darsius", 3
+   jump: mainloop
+
+   label: darsius_drain_spell_label
+   castspell: "Darsius", 4
+   jump: mainloop
+
+   label: darsius_drain2_spell_label
+   castspell: "Darsius", 5
+   jump: mainloop
+
+   label: darsius_enchant_spell_label
+   castspell: "Darsius", 6
+   jump: mainloop
+
+   label: darsius_fear_spell_label
+   castspell: "Darsius", 7
+   jump: mainloop
+
+# These are the labels for the Game Controls...
+   label: load_game_label
+   console: You open the Load record...
+   loadwait: 0
+   jump: mainloop
+
+   label: save_game_label
+   ifenemy: nosavelabel
+   console: You open the Save record...
+   savewait: 0
+   jump: mainloop
+
+   label: journal_label
+   ifenemy: noquestlabel
+   console: You open the Quest Journal...
+   questwait: 0
+   jump: mainloop
+
+   label: help_icon_label
+   raw: "item_help"
+   jump: mainloop
+
+   label: audio_label
+   raw: "toggle_audio"
+   jump: mainloop
+
+   label: exit_label
+   raw: "exit"
+   jump: mainloop
+
+# This is for the map icon click...
+   label: map_icon_label
+   ifenemy: nomaplabel
+   console: You open the automap...
+   setcurrentmap: "hearthshire"
+   mapmode: on
+   jump: mainloop
+
+# Not allowed labels (noequip, etc...)
+   label: noequiplabel
+   console: "You cannot equip while an enemy is present."
+   jump: mainloop
+
+   label: nomovelabel
+   console: "You cannot move that way while an enemy is present."
+   jump: mainloop
+
+   label: nomaplabel
+   console: "You cannot open your automap while an enemy is present."
+   jump: mainloop
+
+   label: nosavelabel
+   console: "You cannot save while an enemy is present."
+   jump: mainloop
+
+   label: noquestlabel
+   console: "You cannot open your journal while an enemy is present."
+   jump: mainloop
+
+# Potion usage
+   # Persephone Health potion...
+   label: p_use_hpotion
+   usepotion: "Persephone", hpotion
+   jump: mainloop
+
+   # Persephone Magic potion...
+   label: p_use_mpotion
+   usepotion: "Persephone", mpotion
+   jump: mainloop
+
+   # Persephone Fairy Salve...
+   label: p_use_salve
+   usepotion: "Persephone", fairysalve
+   jump: mainloop
+
+   # Darsius Health potion...
+   label: d_use_hpotion
+   usepotion: "Darsius", hpotion
+   jump: mainloop
+
+   # Darsius Magic potion...
+   label: d_use_mpotion
+   usepotion: "Darsius", mpotion
+   jump: mainloop
+
+   # Darsius Fairy Salve...
+   label: d_use_salve
+   usepotion: "Darsius", fairysalve
+   jump: mainloop
+
+# Reading a book (when clicked on party member)
+   label: read_book_label
+   ifenemy: no_read_enemy
+   console: "You open the book..."
+   raw: "set_book_cursor"
+   playwav: "audio/sfx/bookopen.wav"
+   showbookanim: 0
+   raw: "show_book"
+   bookwaitx: 0
+   raw: "hide_book"
+   jump: mainloop
+
+   label: no_read_enemy
+   console: "You cannot read a book while an enemy is present."
+   jump: mainloop
+####################################################################################
+# These are for the mini-map movement directions (and even the WASD movements)
+   label: down_map_label
+   label: downlabel2
+   ifenemy: nomovelabel
+   move: "rp0024.txt"
+   jump: mainloop
+
+   label: up_map_label
+   label: uplabel2
+   ifenemy: nomovelabel
+   move: "rp0030.txt"
+   jump: mainloop
+
+# Spawn spider?
+   label: spawn_spider_label
+   ifbool: 0, true, party_spider_spawn
+   ifrandom: 45, loot_spider_spawn
+   showanim: dead_air.txt, dead_air
+   spawnenemy: spider1.txt, 0
+   jump: after_spawn_lotto
+
+   label: loot_spider_spawn
+   showanim: dead_air.txt, dead_air
+   spawnenemy: spider1a.txt, 0
+   jump: after_spawn_lotto
+   
+   label: party_spider_spawn
+   ifrandom: 45, loot_party_spider_spawn
+   showanim: dead_air.txt, dead_air
+   spawnenemy: spider1b.txt, 0
+   jump: after_spawn_lotto
+
+   label: loot_party_spider_spawn
+   showanim: dead_air.txt, dead_air
+   spawnenemy: spider1c.txt, 0
+   jump: after_spawn_lotto
+
+# Left Behind loot?
+   label: left_behind_label
+   ifncursor: notake
+   hide: coins3
+   removebutton: left_behind_label
+   console: "You found 3 G.P."
+   playwav: "audio/sfx/gpcoins.wav"
+   intchange: 8, "add", 3
+   jump: mainloop
+
+# Decor look
+   label: leaf_label
+   console: "This is a single fallen leaf."
+   jump: mainloop
+
+   label: hollow_label
+   ifcursorfull: drop_hollow
+   console: "This hollow does not contain anything."
+   jump: mainloop
+
+   label: drop_hollow
+   console: "I don't think you want to drop this item in the hollow."
+   jump: mainloop

@@ -1,0 +1,12 @@
+100
+cinematic
+darsius_idle1, 533, 449
+darsius_gone1, 533, 449
+darsius_gone2, 533, 449
+darsius_gone3, 533, 449
+darsius_gone4, 533, 449
+darsius_gone5, 533, 449
+darsius_gone6, 533, 449
+darsius_gone7, 533, 449
+p1, 533, 449
+null

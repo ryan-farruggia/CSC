@@ -1,0 +1,5 @@
+check if the command exists in path
+if exists, create child
+forks
+starts process
+terminate child

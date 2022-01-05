@@ -1,0 +1,11 @@
+260
+loop
+s_idle1, 0, 230
+s_idle2, 0, 230
+s_idle3, 0, 230
+s_idle2, 0, 230
+s_idle1, 0, 230
+s_idle1, 0, 230
+s_idle1, 0, 230
+s_idle1, 0, 230
+s_idle1, 0, 230

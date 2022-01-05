@@ -1,0 +1,2 @@
+CSUS 60 30 sacramento
+CSUL 70 25 LongBeach

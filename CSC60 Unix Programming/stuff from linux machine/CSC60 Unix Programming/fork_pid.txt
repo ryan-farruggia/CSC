@@ -1,0 +1,31 @@
+Write C programs, to fork a process.
+In first program, after forking, print the parent process in the child process. Print the child process ID in the parent process ID.
+In second program, after forking, execute  the bash command pwd using execl command
+In third program, after forking, execute  the bash command cal using execl command
+In the fourth program, after forking: wait in the parent process. call exit ( 0 ) in the child process.
+
+Put all of them in one big program and attach like shown:
+
+/*
+Insert Program 1:
+
+*/
+
+/*
+Insert Program 2
+
+*/
+
+/*
+Insert Program 3:
+
+*/
+
+/*
+Insert Program 4
+
+*/
+
+Attach the screenshot of each program too: I need four screenshots, one for each program.
+
+6 points for each program and 6 point for all the screenshots

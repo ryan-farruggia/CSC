@@ -1,0 +1,21 @@
+ngbee: main.o linkedList.o getAQuestion.o prompt.o review.o
+	gcc main.o linkedList.o getAQuestion.o prompt.o review.o -o ngbee
+
+main.o: main.c
+	gcc -c main.c 
+
+linkedList.o: linkedList.c
+	gcc -c linkedList.c 
+
+getAQuestion.o: getAQuestion.c
+	gcc -c getAQuestion.c 
+
+prompt.o: prompt.c
+	gcc -c prompt.c
+
+review.o: review.c
+	gcc -c review.c
+
+clean:
+	rm -rf *.o
+

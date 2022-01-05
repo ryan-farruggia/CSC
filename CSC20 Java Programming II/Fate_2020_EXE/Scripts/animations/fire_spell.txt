@@ -1,0 +1,13 @@
+20
+cinematic
+fire1, 0, 0
+fire2, 0, 0
+fire3, 0, 0
+fire4, 0, 0
+fire5, 0, 0
+fire6, 0, 0
+fire7, 0, 0
+fire8, 0, 0
+fire9, 0, 0
+fire10, 0, 0
+null

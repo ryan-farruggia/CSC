@@ -1,0 +1,6 @@
+250
+loop
+sconce150_reverse, 813, 396
+sconce250_reverse, 813, 396
+sconce350_reverse, 813, 396
+sconce250_reverse, 813, 396

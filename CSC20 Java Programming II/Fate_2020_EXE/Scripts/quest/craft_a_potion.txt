@@ -1,0 +1,10 @@
+craftapotionquest
+Craft a Potion
+The elven cook has given you a recipe to create a health potion. You must find and assemble the ingredients to make a Health Potion.
+Reward: none
+5
+Find ground red flower petals*craft0001*2*5*5*pyrescove
+Acquire silver salts*craft0002*6*4*4*pyrescove
+Find empty flask*craft0003*6*2*4*pyrescove
+Gather purified water*craft0004*5*5*4*pyrescove
+Assemble and bottle the potion*craft0005*7*4*4*pyrescove

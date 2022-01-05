@@ -1,0 +1,14 @@
+add.o: add.c
+	gcc add.c -c -o add.o
+
+sub.o: sub.c
+	gcc sub.c -c -o sub.o
+
+main.o : main.c
+	gcc main.c -c -o main.o
+
+mycalc: add.o sub.o main.o
+	gcc add.o sub.o main.o -o mycalc
+
+clean:
+	rm -rf add.o sub.o main.o mycalc

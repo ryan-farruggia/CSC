@@ -1,0 +1,17 @@
+add.o:add.c
+	gcc -c add.c
+minus.o:minus.c 
+	gcc -c minus.c
+
+multiply.o:multiply.c 
+	gcc -c multiply.c
+
+calcMain.o:calcMain.c
+	gcc -c calcMain.c
+
+calculator: add.o calcMain.o minus.o multiply.o
+	gcc add.o calcMain.o minus.o multiply.o -o calculator
+
+clean:
+	rm *.o
+

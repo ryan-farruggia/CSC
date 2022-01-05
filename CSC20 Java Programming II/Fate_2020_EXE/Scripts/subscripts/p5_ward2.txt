@@ -1,0 +1,3 @@
+# This is for Persephone's Ward II Spell loading...   
+   show: ward2icon, 1183, 1040
+   buttongx: persephone_ward2_spell_label, 1183, 1040, 1235, 1071, spell_hover, 1183, 1040, "Ward II"

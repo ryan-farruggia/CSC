@@ -1,0 +1,85 @@
+//-------------------------------------------------------------
+//-----------------Do not edit the XML tags--------------------
+//-------------------------------------------------------------
+
+//<AcroForm>
+//<ACRO_source>bmpaddfinding:Annot1:MouseUp:Action1</ACRO_source>
+//<ACRO_script>
+/*********** belongs to: AcroForm:bmpaddfinding:Annot1:MouseUp:Action1 ***********/
+var findingno = this.getField("swcafindingno").value;
+var admincategory = this.getField("swcaadmincategory").value;
+var standardref = this.getField("swcastandardreference").value;
+var standard = this.getField("swcastandard").value;
+
+var activetreatment = this.getField("activetreatmentTB");
+var monitoring = this.getField("monitoringTB");
+var plans = this.getField("plansTB");
+var smarts = this.getField("smartsTB");
+var tahoe = this.getField("tahoerequirementsTB");
+var training = this.getField("trainingTB");
+
+var swcatotal = this.getField("swcatotalTB");
+swcatotal.value = swcatotal.value + 1;
+
+if (admincategory == "Active Treatment Systems") {
+    activetreatment.value = activetreatment.value + 1;
+} else if (admincategory == "Monitoring and Reporting") {
+    monitoring.value = monitoring.value + 1;
+} else if (admincategory == "Plans and Permits") {
+    plans.value = plans.value + 1;
+} else if (admincategory == "SMARTS") {
+    smarts.value = smarts.value + 1;
+} else if (admincategory == "Tahoe CGP - Specific Requirements") {
+    tahoe.value = tahoe.value + 1;
+} else if (admincategory == "Training") {
+    training.value = training.value + 1;
+} else {
+    console.println("Hi there");
+}
+//</ACRO_script>
+//</AcroForm>
+
+//<AcroForm>
+//<ACRO_source>swcaaddfinding:Annot1:MouseUp:Action1</ACRO_source>
+//<ACRO_script>
+/*********** belongs to: AcroForm:swcaaddfinding:Annot1:MouseUp:Action1 ***********/
+var findingno = this.getField("swcafindingno").value;
+var admincategory = this.getField("swcaadmincategory").value;
+var standardref = this.getField("swcastandardreference").value;
+var standard = this.getField("swcastandard").value;
+
+var activetreatment = this.getField("activetreatmentTB");
+var monitoring = this.getField("monitoringTB");
+var plans = this.getField("plansTB");
+var smarts = this.getField("smartsTB");
+var tahoe = this.getField("tahoerequirementsTB");
+var training = this.getField("trainingTB");
+
+var swcatotal = this.getField("swcatotalTB");
+swcatotal.value = swcatotal.value + 1;
+
+if (admincategory == "Active Treatment Systems") {
+    activetreatment.value = activetreatment.value + 1;
+} else if (admincategory == "Monitoring and Reporting") {
+    monitoring.value = monitoring.value + 1;
+} else if (admincategory == "Plans and Permits") {
+    plans.value = plans.value + 1;
+} else if (admincategory == "SMARTS") {
+    smarts.value = smarts.value + 1;
+} else if (admincategory == "Tahoe CGP - Specific Requirements") {
+    tahoe.value = tahoe.value + 1;
+} else if (admincategory == "Training") {
+    training.value = training.value + 1;
+} else {
+    console.println("Hi there");
+}
+//</ACRO_script>
+//</AcroForm>
+
+
+    "a1": [
+        ["SPECs, 13-1.03A General", "CGP, Order XIV.C SWPPP Requirements", "LTP, Order IX.D Availability and Public Records Access"]
+    ],
+    "a2": [
+        ["SPECs, 13-3.01A Summary", "CGP"]
+    ]

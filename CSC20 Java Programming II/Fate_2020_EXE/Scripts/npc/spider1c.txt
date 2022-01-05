@@ -1,0 +1,35 @@
+<idle anim meta> spider_idle.txt, spider_idle
+<intro SFX> audio/sfx/spigrass.wav
+<hp> 5
+<intro anim meta> spider_intro.txt, spider_intro
+<intro message> "Spider stands before you ready for battle!"
+<death anim meta> spider_death.txt, spider_death
+<death SFX> audio/sfx/spidie.wav
+<level> 2
+<leftitem DEPRECATED!> null, null
+<leftitem cgInfo> coins3, 1003, 653
+<leftitem button> left_behind_label, 1006, 651, 1043, 676, "Coins"
+<defense, mojo> 1, 0
+<name> Spider
+<description> "This is a forest spider. He doesn't look too friendly..."
+<enemy RECT> 848, 560, 1234, 765
+<strength> none
+<weakness> none
+<attacked anim meta> spider_hit.txt, spider_hit
+<attacked sfx> audio/sfx/spihit.wav
+<attack delay> 4500
+<number of attacks> 2
+<attack string 1> default
+<attack sfx 1> audio/sfx/whoosh.wav
+<damage 1> 2*6
+<probability 1> 60
+<attack anim meta 1> spider_attack_leg.txt, spider_attack_leg
+<area of effect 1> false
+<attack type 1> physical
+<attack string 2> Spider spits Venom...
+<attack sfx 2> audio/sfx/acid.wav
+<damage 2> 3*7
+<probability 2> 40
+<attack anim meta 2> spider_attack_venom.txt, spider_attack_venom
+<area of effect 2> false
+<attack type 2> physical

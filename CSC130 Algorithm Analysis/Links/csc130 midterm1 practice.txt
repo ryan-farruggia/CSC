@@ -1,0 +1,50 @@
+PART 1:
+algorithmics
+time complexity basics
+big O notation [O(1), O(n), O(log n), O(n log n), O(n^2), O(2^n)]
+big O math (drop constants, drop coefficients, term with largest exponent stays - all others are destroyed)
+
+PART 2:
+what a ADT specifies (Abstract Data Types separate implementation from behavior; can use any data structure)
+bags (can only add items, order does not matter, simply lets you store information with no serious advantages)
+queues (line in a grocery store)
+stacks (a stack of plates, take from and add onto the top first)
+deques (line in a grocery store but people in the back can leave)
+
+PART 3:
+variable scope (global vars accessed by all, local vars accessed by the functions/modules they're created in)
+system stack (temporarily stores activation records for functions and local vars, data is deleted after function finishes)
+system heap (dynamically stores memory and only deletes after the entire program finishes)
+loitering (deleting data without also removing its reference link, creating an orphaned piece of data)
+pools (instead of making a new node for every piece of data, create a set # of nodes and place them in a container (a pool) and use them as needed)
+recursion (calling a function within itself to achieve looping, *ALWAYS PROVIDE AN EXIT CONDITION)
+
+PART 4:
+prefix, postfix, infix (prefix: +ab, postfix: ab+, infix: a+b)
+shunting yard algorithm (data moves straight to output, operators and parenthesis are moved to operator stack)
+
+PART 5:
+ALL ATTRIBUTES OF:
+-binary search (split in half)
+-bubble sort (smallest bubbles up)
+-selection sort (find smallest and move to front)
+-insertion sort (move item left until correct place)
+-shell sort (compare two items at a specific distance, if one on left is bigger than right, swap them)
+
+PART 6:
+merging arrays (unsorted = just stick one onto the end of the other
+(sorted = move through each one at the same time and sort both into one array)
+merge sort (sort two different parts of an array, then merge the two and continue [divide & conquer])
+quick sort (pick a pivot point, rearrange items so smaller is on left and big on right)
+
+PART 7:
+NON-COMPARATIVE SORTING:
+dictionaries (works like a normal dictionary, you need one key to get to one piece of information)
+bucket sort (place items in buckets with certain ranges, sort, then return to original array)
+radix sort (bucket sort but: sort by digit in ones place, tens place, hundreds place, etc., and return to original array)
+
+PART 8:
+tree terminology (node: contains data, root: start point, branch: links nodes, branching-factor: # of branches a node has, internal node: node w/ >= 1 child, leaf: node w/o children, ancestor: predecessors, descendant: successors, depth: # of ancestors to root, height: max depth of any node, size: total # of nodes)
+how are trees defined? (recursively)
+tree traversals (visits nodes by recursion, depth-first preorder: nodes are visited before their descendants (going down), depth-first postorder: nodes are visited after their descendants (going up), breadth-first: nodes are visited by their level (depth 1, 2, etc.))
+binary trees (nodes only have 2 successors, left child & right child, easily represented by arrays/linked-lists)

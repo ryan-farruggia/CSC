@@ -1,0 +1,7 @@
+parvusthegnometag
+Parvus the Gnome
+Darsius said the gate out of Hearthshire is locked and a minion of Nexa is ruling Hearthshire from the Citadel. You need to make haste to Brimstone to speak with his friend: a historian, and gnome, named Parvus.
+Reward: none
+2
+Journey to Brimstone Village*parvus0001
+Speak with Parvus*parvus0002

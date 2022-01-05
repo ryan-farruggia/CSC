@@ -1,0 +1,14 @@
+50
+speech
+500, 140, bluebook1, 50
+500, 140, bluebook2, 50
+500, 140, bluebook3, 50
+500, 140, bluebook4, 50
+500, 140, bluebook5, 50
+500, 140, bluebook6, 50
+500, 140, bluebook7, 50
+500, 140, bluebook8, 50
+500, 140, bluebook9, 50
+500, 140, bluebook10, 50
+500, 140, bluebook11, 50
+500, 140, bluebook12, 50

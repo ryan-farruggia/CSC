@@ -1,0 +1,7 @@
+## Step #2: Setting Up the Environment
+### Create a Maven Java Project
+1. If you're using Eclipse (recommended), go to `File > New > Project`
+2. Create a new Maven Project by either searching "Maven Project" in the search wizard or choosing it from the list of available choices: [see here](https://imgur.com/a/3LoOLBr).
+3. Make sure to check the box "Create a Simple Project": [see here](https://imgur.com/6dnB5mF).
+4. Enter the GroupID: `in.csc131project.teamDP`, and ArtifactID: `DataPiratesProject`, [see here](https://imgur.com/a/wAs1DB0).
+5. Press Finish.

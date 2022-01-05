@@ -1,0 +1,11 @@
+consecrationquest
+Consecration
+The ghost of Gregory the Elder has informed you that his tomb is desecrated. If you help him, he will give you proof of your ancestry.
+Reward: Crest of Tibur
+6
+Make white carnation powder*con0001
+Purchase Olive Oil*con0002
+Obtain garden sage*con0003
+Purchase crystal vial*con0004
+Assemble and bottle anointing oil*con0005
+Conserate Gregory's Tomb*con0006

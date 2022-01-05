@@ -1,0 +1,30 @@
+The neighbors of USA are 
+1. Canada and Mexico
+2. United Kingdom, Russia, Mexico and North Carolina
+3. Brazil, Mexico, Canada
+4. No Neighbors
+1
+What is USA stands for
+1. United States of America
+2. United Stand Always
+3. United South Africa
+4. United State Employees
+1
+Where is USA
+1. Above Canada
+2. Below Canada
+3. Below Mexico
+4. Next to Texas
+2
+Where is Canada
+1. Below USA
+2. Next to Australia
+3. Below Mexico
+4. Above USA
+4
+Where is California
+1. Next to Nevada
+2. Next to Texas
+3. Next to Washington DC
+4. Next to Washington State
+1

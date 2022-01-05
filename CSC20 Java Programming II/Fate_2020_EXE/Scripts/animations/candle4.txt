@@ -1,0 +1,6 @@
+140
+loop
+candle3, 242, 518
+candle2, 242, 518
+candle1, 242, 518
+candle2, 242, 518

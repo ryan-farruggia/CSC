@@ -1,0 +1,9 @@
+compile the programs
+gcc writer.c -o writer -lrt
+gcc reader.c -o reader -lrt
+gcc unlink.c -o unlink -lrt
+
+run the program
+./writer shm.demo 
+./reader shm.demo 
+./unlink shm.demo

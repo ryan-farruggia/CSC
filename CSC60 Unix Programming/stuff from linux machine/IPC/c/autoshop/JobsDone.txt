@@ -1,0 +1,4 @@
+Kathy 2 3 1 5
+Larry 3 4 2 6
+Mark 2 5 3 2
+Nancy 4 2 3 8

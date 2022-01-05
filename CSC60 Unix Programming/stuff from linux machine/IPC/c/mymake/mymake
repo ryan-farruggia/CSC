@@ -1,0 +1,17 @@
+add.o:add.c
+	gcc -c add.c
+minus.o:minus.c 
+	gcc -c minus.c
+
+multiply.o:multiply.c 
+	gcc -c multiply.c
+
+main.o:main.c
+	gcc -c main.c
+
+sprcalc: add.o main.o minus.o multiply.o
+	gcc add.o main.o minus.o multiply.o -o sprcalc
+
+clean:
+	rm *.o
+

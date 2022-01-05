@@ -1,0 +1,8 @@
+ gcc -c -g add.c mult.c sub.c
+ ar -r libcalc.a add.o mult.o sub.o
+ ar tv libcalc.a
+ mkdir mylibs
+ cp libcalc.a mylibs/
+  gcc -g calc.c -Lmylibs libcalc.a
+  use nm commands ,  only function uses are insertd
+  nm a.out and search for functions includes

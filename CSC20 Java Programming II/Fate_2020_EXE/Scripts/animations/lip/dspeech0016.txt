@@ -1,0 +1,25 @@
+888
+speech
+533, 449, p1, 109
+533, 449, darsius_aei, 100
+533, 449, darsius_cdgknstxyz, 100
+533, 449, darsius_aei, 100
+533, 449, darsius_o, 100
+533, 449, darsius_cdgknstxyz, 100
+533, 449, darsius_aei, 100
+533, 449, darsius_cdgknstxyz, 100
+533, 449, darsius_aei, 100
+533, 449, darsius_cdgknstxyz, 131
+533, 449, p1, 26
+533, 449, darsius_aei, 100
+533, 449, darsius_ee, 100
+533, 449, darsius_r, 100
+533, 449, darsius_cdgknstxyz, 100
+533, 449, darsius_l, 100
+533, 449, darsius_aei, 100
+533, 449, darsius_r, 100
+533, 449, darsius_th, 100
+533, 449, darsius_l, 100
+533, 449, darsius_ee, 100
+533, 449, darsius_aei, 179
+533, 449, p1, 500

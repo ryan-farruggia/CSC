@@ -1,0 +1,14 @@
+60
+cinematic
+cyc1, 0, 0
+cyc2, 0, 0
+cyc3, 0, 0
+cyc4, 0, 0
+cyc5, 0, 0
+cyc6, 0, 0
+cyc7, 0, 0
+cyc8, 0, 0
+cyc9, 0, 0
+cyc10, 0, 0
+cyc11, 0, 0
+null

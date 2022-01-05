@@ -1,0 +1,3 @@
+Sample Book
+bookimagetest
+This is a tester book! I want to see how it does with looping text. If all goes well, I will have a solid interface for book design. Let us hope!

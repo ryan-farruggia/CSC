@@ -1,0 +1,6 @@
+meetdarsiustag
+Meet at the Museum
+You agreed to accept the help of Darsius, the runaway slave, and you are to meet him at the Hearthshire Museum.
+Reward: none
+1
+Meet Darsius at Museum*meetdarsius01*9*7*4*hearthshire

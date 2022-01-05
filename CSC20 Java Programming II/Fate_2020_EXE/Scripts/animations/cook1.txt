@@ -1,0 +1,11 @@
+200
+loop
+cook1_idle1, 1017, 262
+cook1_idle2, 1017, 262
+cook1_idle3, 1017, 262
+cook1_idle2, 1017, 262
+cook1_idle1, 1017, 262
+cook1_idle1, 1017, 262
+cook1_idle1, 1017, 262
+cook1_idle1, 1017, 262
+cook1_idle1, 1017, 262

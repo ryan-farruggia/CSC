@@ -1,0 +1,9 @@
+# This is for the solo Persephone (no Darsius)
+   setportpics: "Persephone", 1734, 84, p1, p2, p3, p4, 0, 1
+   buttong: perse_portrait_label, 1734, 84, 1831, 181, slothover, 1734, 84
+   showx: 1, meter_shell, 1724, 176
+   meterx: red_meter1, 1754, 197, 0, 1, health
+   meterx: blue_meter1, 1799, 197, 2, 3, magic
+   buttong: perse_hp_label, 1753, 196, 1771, 326, meter_hover, 1753, 196
+   buttong: perse_mp_label, 1798, 196, 1816, 326, meter_hover, 1798, 196
+   buttongx: persephone_ice_spell_label, 1122, 1000, 1174, 1031, spell_hover, 1122, 1000, "Ice"

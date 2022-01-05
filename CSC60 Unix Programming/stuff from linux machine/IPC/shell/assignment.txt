@@ -1,0 +1,33 @@
+Program 1:
+
+Prompt the user to enter 
+1 for add
+2 for sub
+3 for multiply
+4 for division
+
+When 1 is entered, prompt the user to enter two numbers to add
+print the result
+
+
+When 2 is entered, prompt the user to enter two numbers to minus
+print the result
+
+When 3 is entered, prompt the user to enter two numbers to multiply
+print the result
+
+When 4 is entered, prompt the user to enter two numbers to divide
+print the result
+
+
+
+Program 2:
+copy this file into your folder
+cp /gaia/class/student/srivatss/listing.txt .
+
+count the total size of all files (not directories) and print the total size
+count the number of folders listed in the file
+count the number of files ( not directories) listed in the file
+
+
+

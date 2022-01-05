@@ -1,0 +1,23 @@
+slot0: 0, 0
+slot1: 0, 0
+slot2: 0, 0
+slot3: 0, 0
+slot4: 0, 0
+slot5: 0, 0
+level_index: 9
+xp_index: 11
+maglev_index: 10
+mag_xp_index: 12
+current_hp_index: 0
+max_hp_index: 1
+current_mp_index: 2
+max_mp_index: 3
+hp_roll: "2d2"
+mp_roll: "2d4"
+hp_meter: persephone_hp
+mp_meter: persephone_mp
+attack_delay: 2750
+inactive_x: 1112
+inactive_y: 962
+hit_pic: 1654, 84, phit
+dead_pic: prodead1

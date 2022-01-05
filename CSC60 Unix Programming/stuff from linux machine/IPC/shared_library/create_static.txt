@@ -1,0 +1,22 @@
+# build static linked application
+gcc -static-libgcc main.o add.o /usr/lib/i686-redhat-linux5E/lib/libc.a -o calc_st
+gcc -c main.c 
+
+# build static library and link statically
+gcc -c add.c -o add.o
+gcc -c sub.c -o sub.o
+ar -cru libmycalc.a add.o sub.o
+gcc main.c -L. -lmycalc -o calc
+calc
+
+ls -l main calc
+-rwx------ 1 srivatss othcsc   4794 May 23 07:46 calc*
+-rwx------ 1 srivatss othcsc 562308 Oct 12  2017 main*
+
+~/IPC/shared_library> mv libmycalc.a backup.a
+~/IPC/shared_library> calc
+adding 3 and 4 = 7
+absolute -4 = 4
+
+
+

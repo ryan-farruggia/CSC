@@ -1,0 +1,8 @@
+all signals are listed in this /usr/include/bits/signum.h
+int.c
+fpe.c
+seg.c
+sigchld.c
+sigkill.c
+ipc.c
+

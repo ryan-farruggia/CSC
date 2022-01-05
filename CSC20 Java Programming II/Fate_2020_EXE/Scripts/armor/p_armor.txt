@@ -1,0 +1,4 @@
+Cloth Boots*0*0*2*0*1
+Fur Boots*0*0*4*0*3
+Copper Bracelet*4*0*2*0*2
+Copper Ring*1*0*0*10*0

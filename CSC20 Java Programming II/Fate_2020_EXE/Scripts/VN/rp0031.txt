@@ -1,0 +1,488 @@
+# This stuff is ALWAYS the header...
+   label: start
+     ifloadflag: false, afterloadflag
+     set: "bool", 99, true
+     label: afterloadflag
+   clear: all
+   inventory: on
+   timeofday: off
+
+# Update the party for the Equip engine...
+   updateparty: 0
+
+# This is level specific (load bg, show viewport, non-takeable buttons)
+   bg: room0026
+   raw: "rain_room_particle"
+   raw: "display_gp"
+   setambientaudio: "audio/ambient/hearth_forest.wav"
+   setmusic: "audio/music/hearthshire.wav"
+
+# This is UI overlay stuff
+   loadsub: ui.txt
+
+# This is the portrait and meter set up
+   ifnbool: 0, true, soloload
+   # Load the party
+      loadsub: persephone_party.txt
+      # Add Darsius stuff here too (profile, meter, controls, etc.)
+      loadsub: darsius_party.txt
+      ifboolx: 9, true, d1_ice.txt
+      ifboolx: 10, true, d2_cyclone.txt
+      ifboolx: 11, true, d3_lightning.txt
+      ifboolx: 12, true, d4_drain.txt
+      ifboolx: 13, true, d5_drain2.txt
+      ifboolx: 14, true, d6_enchant.txt
+      ifboolx: 15, true, d7_fear.txt
+      jump: aftersoloload
+   label: soloload
+      loadsub: persephone_solo.txt
+   label: aftersoloload
+
+#Check out Persephone's Controls...
+   ifboolx: 2, true, p1_fire.txt
+   ifboolx: 3, true, p2_cyclone.txt
+   ifboolx: 4, true, p3_lightning.txt
+   ifboolx: 5, true, p4_ward.txt
+   ifboolx: 6, true, p5_ward2.txt
+   ifboolx: 7, true, p6_heal.txt
+   ifboolx: 8, true, p7_heal2.txt
+
+# Set up the automap?
+   minimaplocation: "Hearthshire"
+   # Default map first...
+   minimaplayout: "NEWS"
+   setautomap: hearthshire, 7, 4, "0l50", rp0031.txt
+
+# Peddler
+   showanim: peddler.txt, peddler
+   showanim: peddler_blink.txt, peddler_blink
+   button: peddler_label, 1039, 291, 1205, 761, "Peddler"
+
+# Takeables (items for sale)
+   ifbool: 37, true, aftervial
+   show: vial, 1311, 671
+   button: vial_label, 1316, 669, 1337, 707, "Vial"
+   label: aftervial
+   ifbool: 38, true, afterboots
+   show: cloth_boots, 695, 655
+   button: boots_label, 697, 667, 755, 712, "Cloth Boots"
+   label: afterboots
+   ifbool: 39, true, afterring
+   show: copper_ring_vp, 584, 683
+   button: ring_label, 583, 685, 612, 712, "Copper Ring"
+   label: afterring
+   # This is only if Darsius is in the party...
+   ifbool: 0, false, afterburlap
+   ifbool: 41, true, afterburlap
+   show: burlap_boots, 1393, 647
+   button: burlap_label, 1397, 646, 1449, 709, "Burlap Boots"
+   label: afterburlap
+
+# Decor
+   show: signpost, 513, 307
+   button: signpost_label, 607, 397, 653, 658, "Signpost"
+   button: sign_label, 518, 316, 743, 396, "Sign"
+
+# Direction viewport arrow(s)
+   buttong: downlabel2, 549, 805, 1053, 911, downcursor, -100, -100
+   buttong: rightlabel2, 1500, 382, 1920, 715, rightcursor, -100, -100
+   buttong: leftlabel2, 33, 393, 340, 707, leftcursor, -100, -100
+   buttong: uplabel2, 784, 261, 1030, 524, upcursor, -100, -100
+####################################################################################
+# This is the mainloop (always the same)
+   label: mainloop
+   clickwait: 0
+   jump: mainloop
+
+# Cannot pick up items because cursor and/or inventory space is an issue
+   label: notake
+   console: "No room to take item right now!"
+   jump: mainloop
+
+# This is the status of the HP/MP (meter bar click)
+   label: perse_hp_label
+   displaypstring: "Persephone", "hp", 0, 1
+   jump: mainloop
+
+   label: perse_mp_label
+   displaypstring: "Persephone", "mp", 2, 3
+   jump: mainloop
+
+   label: dar_hp_label
+   displaypstring: "Darsius", "hp", 4, 5
+   jump: mainloop
+
+   label: dar_mp_label
+   displaypstring: "Darsius", "mp", 6, 7
+   jump: mainloop
+
+# This is clicking Persephone's portrait
+   label: perse_portrait_label
+   ifcursortext: "H.Potion", p_use_hpotion
+   ifcursortext: "Health Potion", p_use_hpotion
+   ifcursortext: "Magic Potion", p_use_mpotion
+   ifcursortext: "Fairy Salve", p_use_salve
+   ifcursorbook: read_book_label
+   label: perse_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Persephone's Equip/Stats page...
+   equipwait: "Persephone"
+   console: You close Persephone's Equip/Stats page...
+   jump: mainloop
+
+# This is clicking Darsius' portrait
+   label: dar_portrait_label
+   ifcursortext: "H.Potion", d_use_hpotion
+   ifcursortext: "Health Potion", d_use_hpotion
+   ifcursortext: "Magic Potion", d_use_mpotion
+   ifcursortext: "Fairy Salve", d_use_salve
+   ifcursorbook: read_book_label
+   label: dar_portrait_label2
+   ifenemy: noequiplabel
+   # Go into Armor/Stats overlay
+   console: You open Darsius' Equip/Stats page...
+   equipwait: "Darsius"
+   console: You close Darsius' Equip/Stats page...
+   jump: mainloop
+
+# This is Persephone's Clicked Spell Icons
+   label: persephone_ice_spell_label
+   castspell: "Persephone", 0
+   jump: mainloop
+
+   label: persephone_fire_spell_label
+   castspell: "Persephone", 1
+   jump: mainloop
+
+   label: persephone_cyclone_spell_label
+   castspell: "Persephone", 2
+   jump: mainloop
+
+   label: persephone_lightning_spell_label
+   castspell: "Persephone", 3
+   jump: mainloop
+
+   label: persephone_ward_spell_label
+   castspell: "Persephone", 4
+   jump: mainloop
+
+   label: persephone_ward2_spell_label
+   castspell: "Persephone", 5
+   jump: mainloop
+
+   label: persephone_heal_spell_label
+   castspell: "Persephone", 6
+   jump: mainloop
+
+   label: persephone_heal2_spell_label
+   castspell: "Persephone", 7
+   jump: mainloop
+
+# This is Darsius' Clicked Spell Icons
+   label: darsius_fire_spell_label
+   castspell: "Darsius", 0
+   jump: mainloop
+
+   label: darsius_ice_spell_label
+   castspell: "Darsius", 1
+   jump: mainloop
+
+   label: darsius_cyclone_spell_label
+   castspell: "Darsius", 2
+   jump: mainloop
+
+   label: darsius_light_spell_label
+   castspell: "Darsius", 3
+   jump: mainloop
+
+   label: darsius_drain_spell_label
+   castspell: "Darsius", 4
+   jump: mainloop
+
+   label: darsius_drain2_spell_label
+   castspell: "Darsius", 5
+   jump: mainloop
+
+   label: darsius_enchant_spell_label
+   castspell: "Darsius", 6
+   jump: mainloop
+
+   label: darsius_fear_spell_label
+   castspell: "Darsius", 7
+   jump: mainloop
+
+# These are the labels for the Game Controls...
+   label: load_game_label
+   console: You open the Load record...
+   loadwait: 0
+   jump: mainloop
+
+   label: save_game_label
+   ifenemy: nosavelabel
+   console: You open the Save record...
+   savewait: 0
+   jump: mainloop
+
+   label: journal_label
+   ifenemy: noquestlabel
+   console: You open the Quest Journal...
+   questwait: 0
+   jump: mainloop
+
+   label: help_icon_label
+   raw: "item_help"
+   jump: mainloop
+
+   label: audio_label
+   raw: "toggle_audio"
+   jump: mainloop
+
+   label: exit_label
+   raw: "exit"
+   jump: mainloop
+
+# This is for the map icon click...
+   label: map_icon_label
+   ifenemy: nomaplabel
+   console: You open the automap...
+   setcurrentmap: "hearthshire"
+   mapmode: on
+   jump: mainloop
+
+# Not allowed labels (noequip, etc...)
+   label: noequiplabel
+   console: "You cannot equip while an enemy is present."
+   jump: mainloop
+
+   label: nomovelabel
+   console: "You cannot move that way while an enemy is present."
+   jump: mainloop
+
+   label: nomaplabel
+   console: "You cannot open your automap while an enemy is present."
+   jump: mainloop
+
+   label: nosavelabel
+   console: "You cannot save while an enemy is present."
+   jump: mainloop
+
+   label: noquestlabel
+   console: "You cannot open your journal while an enemy is present."
+   jump: mainloop
+
+# Potion usage
+   # Persephone Health potion...
+   label: p_use_hpotion
+   usepotion: "Persephone", hpotion
+   jump: mainloop
+
+   # Persephone Magic potion...
+   label: p_use_mpotion
+   usepotion: "Persephone", mpotion
+   jump: mainloop
+
+   # Persephone Fairy Salve...
+   label: p_use_salve
+   usepotion: "Persephone", fairysalve
+   jump: mainloop
+
+   # Darsius Health potion...
+   label: d_use_hpotion
+   usepotion: "Darsius", hpotion
+   jump: mainloop
+
+   # Darsius Magic potion...
+   label: d_use_mpotion
+   usepotion: "Darsius", mpotion
+   jump: mainloop
+
+   # Darsius Fairy Salve...
+   label: d_use_salve
+   usepotion: "Darsius", fairysalve
+   jump: mainloop
+
+# Reading a book (when clicked on party member)
+   label: read_book_label
+   ifenemy: no_read_enemy
+   console: "You open the book..."
+   raw: "set_book_cursor"
+   playwav: "audio/sfx/bookopen.wav"
+   showbookanim: 0
+   raw: "show_book"
+   bookwaitx: 0
+   raw: "hide_book"
+   jump: mainloop
+
+   label: no_read_enemy
+   console: "You cannot read a book while an enemy is present."
+   jump: mainloop
+####################################################################################
+# These are for the mini-map movement directions (and even the WASD movements)
+   label: down_map_label
+   label: downlabel2
+   ifenemy: nomovelabel
+   move: "rp0030.txt"
+   jump: mainloop
+
+   label: right_map_label
+   label: rightlabel2
+   ifenemy: nomovelabel
+   move: "rp0032.txt"
+   jump: mainloop
+
+   label: left_map_label
+   label: leftlabel2
+   ifenemy: nomovelabel
+   move: "rp0036.txt"
+   jump: mainloop
+
+   label: up_map_label
+   label: uplabel2
+   ifenemy: nomovelabel
+   move: "rp0048.txt"
+   jump: mainloop
+
+# Decor look
+   label: signpost_label
+   console: "This is a wooden signpost."
+   jump: mainloop
+
+   label: sign_label
+   console: "According to the sign, the arrow points toward the path to the Museum."
+   jump: mainloop
+
+# Peddler
+   label: peddler_label
+   ifcursortext: "default", peddler_default_label
+   ifcursortext: "Coal", offer_1gp
+   ifcursortext: "Silver Leaf", leaf_label
+   ifcursortext: "Gold Leaf", leaf_label
+   ifcursortext: "Crystal Vial", sell_vial
+   ifcursortext: "Copper Ring", sell_vial
+   ifcursortext: "Cloth Boots", boots_sell
+   console: "Peddler: 'I have no use for that item.'"
+   jump: mainloop
+
+   label: peddler_default_label
+   console: "Peddler: 'Hello...Point to what you want to buy or show me what you wish to sell.'"
+   jump: mainloop
+
+   label: not_enough_gp_label
+   console: "Peddler: 'I am sorry but you don't have enough gold for this item.'"
+   jump: mainloop
+
+   label: leaf_label
+   console: "Peddler: 'I don't buy these but I believe the merchant in Pyre's Cove will.'"
+   jump: mainloop
+
+   label: sell_vial
+   console: "Peddler: 'Something tells me that you are going to want to hold on to that.'"
+   jump: mainloop
+
+   label: boots_sell
+   console: "Peddler: 'I will give you 10 gold pieces for that.'"
+   menu: 2, dont_sell("Don't Sell"), sell_boots("Sell")
+   jump: mainloop
+
+   label: offer_1gp
+   console: "Peddler: 'I will give you 1 gold piece for that item.'"
+   menu: 2, dont_sell("Don't Sell"), sell_1gp("Sell")
+   jump: mainloop
+
+   label: sell_1gp
+   console: "You received 1 G.P. for your item."
+   playwav: "audio/sfx/gpcoins.wav"
+   intchange: 8, "add", 1
+   setcursor: dcursor, "default"
+   jump: mainloop
+  
+   label: sell_boots
+   console: "You received 10 G.P. for the boots."
+   playwav: "audio/sfx/gpcoins.wav"
+   intchange: 8, "add", 10
+   setcursor: dcursor, "default"
+   set: "bool", 38, false
+   show: cloth_boots, 695, 655
+   button: boots_label, 697, 667, 755, 712, "Cloth Boots"
+   jump: mainloop 
+
+# Items
+   label: vial_label
+   console: "Peddler: 'This is an authentic crystal vial...10 gold pieces.'"
+   menu: 2, op2("Don't Buy"), op1("Buy")
+   jump: mainloop
+
+   label: boots_label
+   console: "Peddler: 'Lil maam, I have these great cloth boots for you. Only 20 gold pieces!'"
+   menu: 2, op2("Don't Buy"), aop1("Buy")
+   jump: mainloop
+
+   label: ring_label
+   console: "Peddler: 'A pure copper ring of solid construction. 150 gold pieces.'"
+   menu: 2, op2("Don't Buy"), bop1("Buy")
+   jump: mainloop
+
+   label: burlap_label
+   # Burlap boots for Darsius?
+   console: "Peddler: 'These burlap boots are a value at 10 gold piece.'"
+   menu: 2, op2("Don't Buy"), cop1("Buy")
+   jump: mainloop
+
+   label: op1
+   # Purchase the vial...
+   ifncursor: notake
+   ifnotenoughgp: 8, 10, not_enough_gp_label
+   console: "You purchased the Crystal Vial..."
+   playwav: "audio/sfx/purchase.wav"
+   hide: vial
+   removebutton: vial_label
+   set: "bool", 37, true
+   setcursor: vial_inv, "Crystal Vial"
+   intchange: 8, "subtract", 10
+   markquestaction: con0004
+   jump: mainloop
+
+   label: aop1
+   # Purchase the cloth boots...
+   ifncursor: notake
+   ifnotenoughgp: 8, 20, not_enough_gp_label
+   console: "You purchased Cloth Boots..."
+   playwav: "audio/sfx/purchase.wav"
+   hide: cloth_boots
+   removebutton: boots_label
+   set: "bool", 38, true
+   setcursor: cloth_boots, "Cloth Boots"
+   intchange: 8, "subtract", 20
+   jump: mainloop
+   
+   label: bop1
+   # Purchase the copper ring...
+   ifncursor: notake
+   ifnotenoughgp: 8, 150, not_enough_gp_label
+   console: "You purchased the Copper Ring..."
+   playwav: "audio/sfx/purchase.wav"
+   hide: copper_ring_vp
+   removebutton: ring_label
+   set: "bool", 39, true
+   setcursor: copper_ring, "Copper Ring"
+   intchange: 8, "subtract", 150
+   jump: mainloop
+
+   label: cop1
+   # Purchase the Burlap Boots...
+   ifncursor: notake
+   ifnotenoughgp: 8, 10, not_enough_gp_label
+   console: "You purchased the Burlap Boots..."
+   playwav: "audio/sfx/purchase.wav"
+   hide: burlap_boots
+   removebutton: burlap_label
+   set: "bool", 41, true
+   setcursor: burlap_boots, "Burlap Boots"
+   intchange: 8, "subtract", 10
+   jump: mainloop
+
+   label: op2
+   label: dont_sell
+   clear: console
+   jump: mainloop

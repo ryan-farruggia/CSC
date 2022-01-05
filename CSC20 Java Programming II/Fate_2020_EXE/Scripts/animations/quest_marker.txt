@@ -1,0 +1,12 @@
+100
+loop
+quest_marker1, 0, 0
+quest_marker2, 0, 0
+quest_marker3, 0, 0
+quest_marker4, 0, 0
+quest_marker5, 0, 0
+quest_marker6, 0, 0
+quest_marker5, 0, 0
+quest_marker4, 0, 0
+quest_marker3, 0, 0
+quest_marker2, 0, 0

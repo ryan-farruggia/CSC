@@ -1,0 +1,16 @@
+888
+speech
+750,250, p1, 132
+750,250, darsius_cdgknstxyz, 105
+750,250, darsius_aei, 105
+750,250, darsius_aei, 105
+750,250, darsius_cdgknstxyz, 115
+750,250, p1, 181
+750,250, darsius_cdgknstxyz, 105
+750,250, darsius_aei, 105
+750,250, darsius_cdgknstxyz, 105
+750,250, darsius_th, 105
+750,250, darsius_aei, 105
+750,250, darsius_ch, 105
+750,250, darsius_r, 162
+750,250, p1, 500

@@ -1,0 +1,14 @@
+20
+cinematic
+lit1, 0, 0
+lit2, 0, 0
+lit3, 0, 0
+lit4, 0, 0
+lit5, 0, 0
+lit6, 0, 0
+lit7, 0, 0
+lit8, 0, 0
+lit9, 0, 0
+lit10, 0, 0
+lit11, 0, 0
+null

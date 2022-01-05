@@ -1,0 +1,3 @@
+Spell Book
+ill_02
+Those who are magically inclined still contain their power within spell books. Each spell is represented by a visual icon. The mage need only touch the icon to activate the spell. Spells can be for light (heal, ward) or for dark (offensive). The first icon is natural and costs no magic. Others use M.P. energy to cast.

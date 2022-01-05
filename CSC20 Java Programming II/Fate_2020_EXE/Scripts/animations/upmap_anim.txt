@@ -1,0 +1,12 @@
+100
+loop
+umap1, 0, 0
+umap2, 0, 0
+umap3, 0, 0
+umap4, 0, 0
+umap5, 0, 0
+umap6, 0, 0
+umap5, 0, 0
+umap4, 0, 0
+umap3, 0, 0
+umap2, 0, 0

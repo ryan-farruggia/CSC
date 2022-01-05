@@ -1,0 +1,18 @@
+fairysalve*Fairy Salve is a powerful liquid made by Vita de Fata to restore life, health, and magic to mortals.
+hpotion*Health Potion is an alchemy elixir to restore mild to severe physical wounds.
+mpotion*Magic Potion is an alchemy elixir to restore magical energy expended during spell casting.
+red_petals*Ground Red Petals are an ingredient used in certain alchemy recipes.
+copperbracelet*This is a copper bracelet that can be equipped on Persephone's left hand.
+coal*This is a large lump of pure coal.
+silver_salt*Silver salt is an alchemy reagent used in the making of certain potions.
+book1_inv*This is a sturdy blue book.
+book2_inv*This is a well made red book.
+mallet*This is an iron mallet for breaking rocks and such.
+flask*This is an empty glass flask for placing liquids in.
+pure_water*This is water of the purest content.
+silver_leaf*This is an uncommon leaf that is made of pure silver.
+gold_leaf*This rare leaf is made of pure gold.
+vial_inv*This is a real crystal vial used to hold sacred reagents.
+cloth_boots*This is a pair of cloth boots that can be equipped on Persephone's feet.
+copper_ring*This ring goes on Persephone's hand and increases her spell casting power.
+acorn1*This is a normal and healthy acorn.

@@ -1,0 +1,77 @@
+1:
+the study of algorithms is known as
+
+2:
+the following is the list of big-o categories
+What is the correct order of these from best to worst?
+
+3:
+match the definition to its word.
+
+5:
+Do the first pass of a radix sort on the given array
+
+question 6:
+for the following tree, please fill in the attributes
+
+question 7:
+what is the auxiliary storage requirements of quick sort
+
+question 8:
+what is the auxiliary storage requirements of merge sort
+
+question 9:
+for the following tree, write down the order in which the nodes will be visited in post-order
+
+question 10:
+for the following tree, write down the order in which the nodes will be visited in pre-order
+
+question 12:
+which of the following operations are in the interface of a stack?
+
+question 14:
+which of the following are specified by an abstract data type?
+
+question 15:
+most programming languages today are what type of language
+
+question 17:
+do the first pass of a quick sort on the array
+
+question 18:
+what is the result of the following postfix expression?
+
+question 19:
+what is the big-o requirement of adding an item to a dynamic array?
+
+question 20:
+what is the time requirement of adding a node to the end of a linked list (without a tail node?)
+
+question 21:
+when an instance of an object is still linked, but won't ever be used by the program again, it is called this
+
+question 22:
+to get a rough idea of how long an algorithm will run, you can multiply the total times the ___ is executed by how long it takes to be executed
+
+question 23:
+what is the big-o classification for the removeLast() method on a deque using a singly-linked list?
+
+question 24:
+what is the average-case time complexity of shell sort?
+
+question 25:
+what is the best-case time complexity of insertion sort?
+
+question 26:
+what is the worst-case time complexity of quick sort?
+
+question 27:
+the following program makes use of a deque. Assume the queue is empty at the beginning. what will be the output?
+
+
+
+
+
+
+
+

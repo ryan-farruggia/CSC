@@ -1,0 +1,7 @@
+80
+cinematic
+spider_fade3, 837, 509
+spider_fade2, 837, 509
+spider_fade1, 837, 509
+spider_idle1, 837, 509
+null

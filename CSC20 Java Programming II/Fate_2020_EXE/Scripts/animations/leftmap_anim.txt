@@ -1,0 +1,12 @@
+100
+loop
+lmap1, 0, 0
+lmap2, 0, 0
+lmap3, 0, 0
+lmap4, 0, 0
+lmap5, 0, 0
+lmap6, 0, 0
+lmap5, 0, 0
+lmap4, 0, 0
+lmap3, 0, 0
+lmap2, 0, 0

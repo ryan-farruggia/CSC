@@ -1,0 +1,6 @@
+The neighbors of USA are
+1. Canada and Mexico
+2. United Kingdom, Russia, Mexico and North Carolina
+3. Brazil, Mexico, Canada
+4. No Neighbors
+1
